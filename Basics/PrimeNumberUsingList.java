@@ -8,9 +8,12 @@ public class PrimeNumberUsingList {
 
         ArrayList <Integer> li = new ArrayList<>();
 
-        for(int i=1 ; i<=n ; i++){
+        for(int i=1 ; i*i<=n ; i++){
             if(n%i==0){
                 li.add(i);
+                if(n/i!=i){
+                    li.add(i);
+                }
             }
         }
 
