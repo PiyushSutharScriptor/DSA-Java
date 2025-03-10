@@ -9,7 +9,7 @@ class RightRotateOptimalLeetcode {
     }
 
     public void rotate(int[] nums, int k) {
-        k = k%nums.length;
+        k = k%nums.length;  
         k=nums.length-k;
         int left = 0; 
         int right = nums.length-1;
