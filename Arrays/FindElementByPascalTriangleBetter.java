@@ -2,7 +2,7 @@ import java.util.*;
 
 public class FindElementByPascalTriangleBetter
 {
-    public static int factorial(int n , int r){
+    public static int functionNcr(int n , int r){
         int result = 1;
         for(int i=0;i<r;i++){
             result = result*(n-i);
@@ -21,7 +21,7 @@ public class FindElementByPascalTriangleBetter
 	    int n = row-1;
 	    int r = col-1;
 	    
-	    int sol = factorial(n,r);
+	    int sol = functionNcr(n,r);
 	    
 	    System.out.println("The element : " + sol);
 	    
