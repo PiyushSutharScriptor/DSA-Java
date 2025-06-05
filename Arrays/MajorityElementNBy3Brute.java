@@ -24,7 +24,5 @@ public class MajorityElementNBy3Brute
 	    }
 	    
 	    System.out.println(list);
-	    
-
 	}
 }
