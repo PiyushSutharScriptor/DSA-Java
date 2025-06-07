@@ -8,5 +8,6 @@ public class ArrayListInitialization{
         
         System.out.println(list);
 
+        //end
     }
 }
