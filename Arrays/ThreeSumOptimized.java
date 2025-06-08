@@ -3,7 +3,8 @@ import java.util.*;
 public class ThreeSumOptimized {
 	public static void main(String[] args) {
 	    int arr[] = {0,0,0,2,2,2,2,-2,-2,-2,-1,-1,-1};
-	    
+	    List<List<Integer>> list = new ArrayList<>();
+
 	    Arrays.sort(arr);
 	    
 	    int n = arr.length;
@@ -25,7 +26,8 @@ public class ThreeSumOptimized {
 	                k--;
 	            }
 	            else{
-	                System.out.println(arr[i] + " " + arr[j] + " " + arr[k]);
+                    List <Integer> li = Arrays.asList(arr[i] , arr[j] , arr[k]);
+	                list.add(li);
 	                j++;
 	                k--;
 	                while(j<k && arr[j] == arr[j-1]) j++;
@@ -33,8 +35,8 @@ public class ThreeSumOptimized {
 	            }
 	            
 	        }
-	        
-	        
 	    }
+
+        System.out.println(list);
 	}
 }
