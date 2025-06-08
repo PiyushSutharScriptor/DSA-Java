@@ -5,7 +5,7 @@ public class FourSumBruteForce {
 	    int arr[] = {1,0,-1,0,-2,2};
 	    int n = arr.length;
 	    
-	    List<List<Integer>> list = new ArrayList<>();
+	    Set<List<Integer>> set = new HashSet<>();
 	    
 	    Arrays.sort(arr);
 	    
@@ -15,7 +15,7 @@ public class FourSumBruteForce {
 	                for(int l=k+1 ; l<n ; l++){
 	                    if(arr[i]+arr[j]+arr[k]+arr[l]==0){
 	                        List<Integer> li = Arrays.asList(arr[i],arr[j],arr[k],arr[l]);
-	                        list.add(li);
+	                        set.add(li);
 	                        System.out.println(arr[i] + " " + arr[j] + " " +arr[k] + " " +arr[l]);
 	                    }
 	                }
@@ -23,7 +23,7 @@ public class FourSumBruteForce {
 	        }
 	    }
 	    
-	    System.out.println(list);
+	    System.out.println(set);
 	  
 	}
 }
