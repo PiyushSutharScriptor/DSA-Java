@@ -20,6 +20,7 @@ public class MergeOverlappingIntervalsOptimized
 	        }
 	    }
 	    
+        //printing intervals 
 	    for(int[] ar : merged){
 	        System.out.println(Arrays.toString(ar));
 	    }
