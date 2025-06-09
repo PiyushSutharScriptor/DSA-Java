@@ -11,6 +11,7 @@ public class MergeOverlappingIntervalsOptimized
 	    
 	    List<int[]> merged = new ArrayList<>();
 	    
+        //main logic 
 	    for(int[] ar : arr){
 	        if(merged.isEmpty() || merged.get(merged.size()-1)[1] < ar[0] ){
 	            merged.add(ar);
