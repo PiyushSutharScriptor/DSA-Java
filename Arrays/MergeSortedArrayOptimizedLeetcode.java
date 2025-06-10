@@ -23,6 +23,11 @@ public class MergeSortedArrayOptimizedLeetcode
 	            arr1[k--] = arr2[j--];
 	        }
 	    }
+
+        //case : arr1={0,0} and arr2={2,5}
+        while(j>=0){
+	        arr1[k--] = arr2[j--];
+	    }
 	    
 	    for(int num : arr1){
 	        System.out.print(num + " ");
