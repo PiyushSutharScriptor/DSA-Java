@@ -35,23 +35,23 @@ public class MergeSortedArrayBruteArrayList
 	        b++;
 	    }
 	    
+        //printing whole list
 	    System.out.println(list);
 	    
+        //printing arr1 : 
 	    for(int i=0 ; i<m ; i++){
 	        arr1[i] = list.get(i);
 	    }
-	    
 	    for(int i=0 ; i<m ; i++){
 	        System.out.print(arr1[i] + " ");
 	    }
-	    
-	    
+
+	    System.out.println();
+
+        //printing arr2 : 
 	    for(int i=0 ; i<n ; i++){
 	        arr2[i] = list.get(i+m);
 	    }
-	    
-	    System.out.println();
-	    
 	    for(int i=0 ; i<n ; i++){
 	        System.out.print(arr2[i] + " ");
 	    }
