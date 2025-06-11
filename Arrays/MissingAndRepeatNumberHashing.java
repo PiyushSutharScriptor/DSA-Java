@@ -13,6 +13,7 @@ public class MissingAndRepeatNumberOptimized
 	        hash[arr[i]]++;
 	    }
 	    
+		//logic for repeat and missing number
 	    for(int i=1 ; i<n+1 ; i++){
 	        if(hash[i]==2){
 	            System.out.println("The repeat number : " + i);
