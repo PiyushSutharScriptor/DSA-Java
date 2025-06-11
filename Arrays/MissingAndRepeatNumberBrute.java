@@ -9,7 +9,7 @@ public class MissingAndRepeatNumberBrute
 	    int n = arr.length;
 	    
 	    
-	    
+	    //repeating number
 	    for(int i=1 ; i<n ; i++){
 	        if(arr[i]==arr[i-1]){
 	            System.out.println("The repeating number is : " + arr[i]);
