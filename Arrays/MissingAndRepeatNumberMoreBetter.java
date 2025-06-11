@@ -21,6 +21,7 @@ public class MissingAndRepeatNumberMoreBetter
 	            
 	        }
 	        
+			//main logic
 	       if(count==0) missing = i;
 	       if(count>1) repeat = i;
 	       
