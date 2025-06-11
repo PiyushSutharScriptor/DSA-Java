@@ -22,6 +22,7 @@ public class MissingAndRepeatNumberOptimized
 	        }
 	    }
 	    
+		//printing hash array elements 
 	    for(int num : hash){
 	        System.out.print(num + " ");
 	    }
