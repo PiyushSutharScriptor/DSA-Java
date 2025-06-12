@@ -2,19 +2,24 @@ import java.util.ArrayList;
 
 public class CountInversionOptimized {
     
-    static int count = 0; 
     
-    public static void mergeSort(int arr[], int low, int high, int n) {
+    public static int mergeSort(int arr[], int low, int high, int n) {
+        int count = 0; 
+
         if (low >= high)
-            return;
+            return 0 ;
         int mid = (low + high) / 2;
-        mergeSort(arr, low, mid, n );
-        mergeSort(arr, mid + 1, high, n );
-        merge(arr, low, mid, high, n );
+        count += mergeSort(arr, low, mid, n );
+        count += mergeSort(arr, mid + 1, high, n );
+        count += merge(arr, low, mid, high, n);
+        // println(count);
+        
+        return count;
     }
 
-    public static void merge(int arr[], int low, int mid, int high, int n) {
+    public static int merge(int arr[], int low, int mid, int high, int n) {
         ArrayList<Integer> temp = new ArrayList<>();
+        int count = 0;
         int left = low;
         int right = mid + 1;
         while (left <= mid && right <= high) {
@@ -44,6 +49,8 @@ public class CountInversionOptimized {
         for(int i=low ; i<=high ; i++){
             arr[i] = temp.get(i-low);
         }
+        
+        return count;
     }
 
     public static void main(String[] args) {
@@ -53,8 +60,8 @@ public class CountInversionOptimized {
 
         int low = 0;
         int high = arr.length - 1;
-        mergeSort(arr, low, high, n);
+        int res = mergeSort(arr, low, high, n);
 
-        System.out.println("The count : " + count);
+        System.out.println("The count : " + res);
     }
 }
