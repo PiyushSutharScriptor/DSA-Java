@@ -32,11 +32,10 @@ public class ReversePairsOptimized {
         int left = low;
         int right = mid + 1;
         while (left <= mid && right <= high) {
-            if (arr[left] < 2*arr[right]) {
+            if (arr[left] < arr[right]) {
                 temp.add(arr[left]);
                 left++;
                 
-            //right is smaller 
             } else {
                 temp.add(arr[right]);
                 right++;
@@ -62,6 +61,7 @@ public class ReversePairsOptimized {
     }
 
     public static void main(String[] args) {
+        count = 0;
         int arr[] = {2,4,3,5,1};
 
         int n = arr.length;
