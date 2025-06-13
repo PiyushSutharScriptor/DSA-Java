@@ -27,6 +27,7 @@ public class MaximumSubarrayProduct
 	        if (suffix == 0) suffix = 1; 
 	    }
 	    
+		//output
 	    System.out.println("Maximum subarray product : " + maxNum);
 
 	}
