@@ -4,6 +4,7 @@ public class ReversePairsOptimized {
     
     static int count = 0;
     
+    //main logic 
     public static void countPairs(int arr[], int low, int mid, int high){
         int right = mid+1;
         for(int i=low ; i<=mid ; i++){
