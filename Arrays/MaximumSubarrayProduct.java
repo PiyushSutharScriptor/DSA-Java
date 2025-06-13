@@ -20,6 +20,7 @@ public class MaximumSubarrayProduct
 	        if (prefix == 0) prefix = 1; 
 	    }
 	    
+		//logic 2
 	    for(int i=n-1 ; i>=0 ; i--){
 	        suffix*=arr[i];
 	        
