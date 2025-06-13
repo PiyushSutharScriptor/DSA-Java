@@ -9,6 +9,8 @@ public class MaximumSubarrayProduct
 	    int maxNum = Integer.MIN_VALUE;
 	    int prefix = 1;
 	    int suffix = 1;
+
+		//logic 1
 	    for(int i=0 ; i<n ; i++){
 	        prefix*=arr[i];
 	        
