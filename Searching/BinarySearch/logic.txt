@@ -1,0 +1,17 @@
+//conditions : 
+low = 0;
+high = n-1;
+mid = (low+high)/2;
+target = **;
+
+if(target > arr[mid]){
+    search on right side of mid
+    low = mid+1
+    high = high
+}
+else if (target<arr[mid]){
+    search on left side of mid
+    low = low
+    high = mid-1
+}
+
