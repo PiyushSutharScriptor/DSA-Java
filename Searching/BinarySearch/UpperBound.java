@@ -23,7 +23,6 @@ public class UpperBound
 		int n = arr.length;
 		int target = 2;
 		
-		
 		int low = 0;
 		int high = n-1;
 		
