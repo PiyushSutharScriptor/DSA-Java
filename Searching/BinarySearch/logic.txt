@@ -15,3 +15,15 @@ else if (target<arr[mid]){
     high = mid-1
 }
 
+//===============================================================//
+
+lower bound : (gives first occurrence)
+x = **
+mid>=x 
+
+upper bound : (gives last occurrence)
+x = **;
+mid>x;
+
+//===============================================================//
+
