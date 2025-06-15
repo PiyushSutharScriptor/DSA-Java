@@ -9,9 +9,14 @@ public class MinimumInRotateSortedBinarySearch
 	    int high = n-1;
 	    int min = Integer.MAX_VALUE;
 	    
-	    while(low<high){
+	    while(low<=high){
 	        int mid = (low+high)/2;
 	        
+            if(arr[low] <= arr[high]){
+                min = Math.min(min, arr[low]);
+                break;
+            }
+
 	        if(arr[low] <= arr[mid]){
 	            if(arr[low]<min){
 	                min = arr[low];
