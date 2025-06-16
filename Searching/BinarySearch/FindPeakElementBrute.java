@@ -15,6 +15,7 @@ public class FindPeakElementBrute
 	            System.out.println(arr[i]);
 	        }
 	    }
+        //for peak on last element
 	    if(arr[n-1]>arr[n-2]) System.out.println(arr[n-1]);
 
 	}
