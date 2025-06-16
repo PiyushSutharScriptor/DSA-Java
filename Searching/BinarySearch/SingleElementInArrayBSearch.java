@@ -14,6 +14,7 @@ public class SingleElementInArrayBSearch
            
             if(arr[mid]!=arr[mid-1] && arr[mid]!=arr[mid+1]) return arr[mid];
             
+            //logic
             if (arr[mid] == arr[mid - 1]) {
                 if ((mid - 1) % 2 == 0) {
                     low = mid + 1;
