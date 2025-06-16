@@ -6,6 +6,7 @@ public class FindPeakElementBrute
 	    
 	    int n = arr.length;
 	    
+        //logic
 	    if(n==1 || arr[0]>arr[1]) System.out.println(arr[0]);
 	    for(int i=1 ; i<n-1 ; i++){
 	        if(arr[i-1]<arr[i] && arr[i]>arr[i+1]){
