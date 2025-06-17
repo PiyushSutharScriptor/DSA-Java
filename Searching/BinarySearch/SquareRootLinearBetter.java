@@ -1,5 +1,5 @@
 
-public class SquareRootLinearBrute
+public class SquareRootLinearBetter
 {
 	public static void main(String[] args) {
 	    int n = 25;
