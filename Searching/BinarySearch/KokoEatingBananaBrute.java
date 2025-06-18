@@ -8,7 +8,8 @@ public class KokoEatingBananaBrute
 		int banana = 1;
 		int maxtime = 8;
 		
-		for(int i=1 ; i<27 ; i++){
+        //11 is the max element of the array
+		for(int i=1 ; i<11 ; i++){
 		    
 		    int time = 0;
     		for(int j=0 ; j<n ; j++){
