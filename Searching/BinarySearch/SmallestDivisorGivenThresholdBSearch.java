@@ -3,13 +3,12 @@ public class SmallestDivisorGivenThresholdBSearch
 {
     public static int smallDiv(int arr[] , int thres , int n){
         
-        int low = Integer.MAX_VALUE;
+        int low = 1; //bcz the smallest divisor can be 1
         int high = Integer.MIN_VALUE;
         int ans = 1;
         
         for(int num : arr){
             low = Math.min(low,num);
-            high = Math.max(high,num);
         }
         
         while(low<=high){
