@@ -6,6 +6,10 @@ public class MinimumDaysForMBouquetsBrute
 		    int count = 0;
 		    int pair = 0;
 
+			if(m*k > n){
+				return -1;
+			}
+			
 		    for(int j=0 ; j<n ; j++){
 		        if(arr[j]<=i){
 		            count++;
