@@ -24,6 +24,6 @@ public class MinMaxDistanceGasStationBSearch
             }
         }
         
-        System.out.printf("%.6f\n", high);  
+        System.out.printf("%.6f\n", high);  //printing upto 6 decimal places
     }
 }
