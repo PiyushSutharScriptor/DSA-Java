@@ -29,6 +29,7 @@ public class MedainOfTwoSortedArrayBetter {
             arr[k++] = arr2[j++];
         }
 
+        //median logic 
         double ans = 0;
 
         if (total % 2 == 0) {
