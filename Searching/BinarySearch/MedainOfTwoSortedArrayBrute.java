@@ -22,6 +22,7 @@ public class MedainOfTwoSortedArrayBrute
         
         Arrays.sort(arr);
         
+        //median logic
         double ans = 0;
         
         if(total%2==0){
