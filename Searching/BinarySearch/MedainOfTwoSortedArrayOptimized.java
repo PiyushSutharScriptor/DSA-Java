@@ -51,6 +51,7 @@ public class MedainOfTwoSortedArrayOptimized
         //second mid element 
 		System.out.println(bel);
 		
+        //median logic 
 		if ((m + n) % 2 == 0) {
             System.out.println("Median: " + (ael + bel) / 2.0);
         } else {
