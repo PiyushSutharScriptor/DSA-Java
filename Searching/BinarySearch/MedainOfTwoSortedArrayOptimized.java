@@ -48,6 +48,7 @@ public class MedainOfTwoSortedArrayOptimized
 		
         //first mid element 
 		System.out.println(ael);
+        //second mid element 
 		System.out.println(bel);
 		
 		if ((m + n) % 2 == 0) {
