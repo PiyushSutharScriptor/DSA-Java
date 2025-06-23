@@ -15,6 +15,10 @@ public class KthElementInTwoSortedOptimized
 		int count = 0;
 		int ans = -1;
 		
+        if(k<1 || k>(m+n)){
+            System.out.println("The k value is not valid");
+        }
+
 		while(i<m && j<n){
 		    if(arr1[i]<arr2[j]){
 		        if(count == k-1){
