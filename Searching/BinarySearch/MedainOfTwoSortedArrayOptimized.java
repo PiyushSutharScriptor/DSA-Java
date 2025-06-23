@@ -46,6 +46,7 @@ public class MedainOfTwoSortedArrayOptimized
 	        j++;
 		}
 		
+        //first mid element 
 		System.out.println(ael);
 		System.out.println(bel);
 		
