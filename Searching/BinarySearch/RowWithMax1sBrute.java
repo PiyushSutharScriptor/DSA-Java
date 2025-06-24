@@ -23,6 +23,6 @@ public class RowWithMax1sBrute
 	        
 	    }
 	    
-	    System.out.println(max);
+	    System.out.println("row : " + ans);
 	}
 }
