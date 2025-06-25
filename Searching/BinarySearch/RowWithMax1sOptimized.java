@@ -8,7 +8,7 @@ public class RowWithMax1sOptimized
 	    int ans = -1;
 	    
 	    for(int i=0 ; i<n ; i++){
-	        while(j>=0 && arr[i][j]==1){ //the j value will not change again to zero, the value goes on decreasing as per the 1s
+	        while(j>=0 && arr[i][j]==1){ //the j value will not change again to zero, the value goes on decreasing as per the 1s.
 	            ans = i;
 	            j--;
 	        }
