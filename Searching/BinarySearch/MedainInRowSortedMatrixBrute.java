@@ -18,7 +18,7 @@ public class MedainInRowSortedMatrixBrute
         
         Arrays.sort(newarr);
         
-        med = newarr[(total+1)/2];
+        med = newarr[(total)/2]; //even index = 0 to 14 
         
         return med;
     }
