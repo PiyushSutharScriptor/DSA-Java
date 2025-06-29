@@ -8,6 +8,8 @@ public class RomanToInteger
 	    int n = s.length();
 	    
 	    Map<Character , Integer> map = new HashMap<>();
+
+		//possible cases
 	    map.put('I',1);
 	    map.put('V',5);
 	    map.put('X',10);
@@ -19,6 +21,7 @@ public class RomanToInteger
 	    for(int i=0 ; i<n ; i++){
 	        int current = map.get(s.charAt(i));
 	        
+			//main logic
 	        if(i+1<n && current<map.get(s.charAt(i+1))){
 	            total -= current;
 	        }
