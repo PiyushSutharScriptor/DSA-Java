@@ -56,6 +56,7 @@ public class InsertElementAtKPlaceLL {
                 Node newNode = new Node(val);
                 newNode.next = temp.next;
                 temp.next = newNode;    
+                return head;
             }
 
             temp = temp.next;
