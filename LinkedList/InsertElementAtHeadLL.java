@@ -47,6 +47,10 @@ public class InsertElementAtHeadLL {
 
         //returning the new temp (as starting head of LL);
         return temp;
+
+        //method:02 (shorthand)
+        // Node temp = new Node(val,head);
+        // return temp;
     }
 
     public static void main(String[] args) {
