@@ -36,17 +36,18 @@ public class InsertElementAtTailLL {
         }
     }
 
-    public static Node insertElHead(Node head, int val){
+    public static Node insertElTail(Node head, int val){
+        if(head==null){
+            return new Node(val);
+        }
         Node temp = head;
         Node n = new Node(val);
 
-        Node prev = null;
-        while(temp!=null){
-            prev = temp;
-            temp = temp.next;    
+        while(temp.next!=null){
+            temp = temp.next;   
         }
 
-        prev.next = n;
+        temp.next = n;
         
         return head;
     }
@@ -57,7 +58,7 @@ public class InsertElementAtTailLL {
 
         Node head = createLL(arr);
 
-        head = insertElHead(head,val);
+        head = insertElTail(head,val);
         System.out.println(head.data);
 
         printLL(head);
