@@ -64,7 +64,7 @@ public class InsertElementAtKPlaceLL {
 
         //case : when the position is beyond the range
         if(position>count+1){
-            return null;
+            return head;
         }
 
         return head;
