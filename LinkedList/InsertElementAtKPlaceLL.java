@@ -36,7 +36,7 @@ public class InsertElementAtKPlaceLL {
         }
     }
 
-    public static Node insertElHead(Node head, int val , int position){
+    public static Node insertAtKPlace(Node head, int val , int position){
 
         Node temp = head;
         int count = 0;
@@ -78,7 +78,7 @@ public class InsertElementAtKPlaceLL {
 
         Node head = createLL(arr);
 
-        head = insertElHead(head,val,position);
+        head = insertAtKPlace(head,val,position);
         System.out.println(head.data);
 
         printLL(head);
