@@ -37,7 +37,7 @@ public class InsertElementAtHeadLL {
     }
 
     public static Node insertElHead(Node head, int val){
-        if(head==null) return null;
+        if(head==null) return new Node(val);
 
         //creating a new node and initializing data=val;
         Node temp = new Node(val);
