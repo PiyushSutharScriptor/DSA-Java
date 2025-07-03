@@ -73,6 +73,8 @@ public class DeleteKthElDoublyLinkedList{
         else{
             prev.next = front;
             front.back = prev;
+            temp.next = null;
+            temp.back = null;
         }
 
         return head;
