@@ -40,33 +40,46 @@ public class DeleteKthElDoublyLinkedList{
     }
 
     public static Node deleteKthEl(Node head , int k){
-
-        if(head == null || head.next == null){
-            return null;
-        }
-
-        Node prev = head;
+        Node temp = head;
         int count = 0;
 
-        while(prev.next!=null){
+        while(temp!=null){
             count++;
-            if(count==k-1){
-                prev.next = prev.next.next;
-                prev.next.back = prev;
+            if(count==k){
+                break;
             }
-            prev = prev.next;
+            temp = temp.next;
         }
+        
+        Node prev = temp.back;
+        Node front = temp.next;
 
-        // case : when k is more than elements 
-        if(k>count){
+        //case : single element
+        if(prev==null && front==null){
             return null;
+        }
+        //case : last element 
+        else if(front==null){
+            prev.next = null;
+            temp.back = null;
+        }
+        //case : first element
+        else if(prev==null){
+            front.back = null;
+            temp.next = null;
+            return front;
+        }
+        //case : remaining elements
+        else{
+            prev.next = front;
+            front.back = prev;
         }
 
         return head;
     }
     public static void main(String[] args) {
-        int arr[] = {10,20,30,40,50};
-        int k = 5;
+        int arr[] = {10,20,30,40};
+        int k = 2;
 
         Node head = createDLL(arr);
         head = deleteKthEl(head,k);
