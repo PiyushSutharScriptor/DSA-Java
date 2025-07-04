@@ -45,6 +45,7 @@ public class ReverseSingleLinkedListBrute{
         Stack <Integer> stack = new Stack<>();
         Node temp = head;
         
+        //main logic
         while(temp!=null){
             stack.push(temp.data);
             temp = temp.next;    
