@@ -41,6 +41,7 @@ public class ReverseSingleLinkedListOptimi {
         Node prev = null;
         Node front = null;
         
+        //main logic 
         while(temp!=null){
             front = temp.next;
             temp.next = prev;
