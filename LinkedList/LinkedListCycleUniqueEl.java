@@ -40,11 +40,11 @@ public class LinkedListCycleUniqueEl {
     }
 
     public static Boolean findLoop(Node head) {
-		Map <Integer, Integer> map = new HashMap<>();
+		Map <Node, Integer> map = new HashMap<>();
 		Node temp = head;
 		while(temp!=null) {
-			map.put(temp.data, map.getOrDefault(temp.data, 0)+1);
-            if(map.get(temp.data)==2) {
+			map.put(temp, map.getOrDefault(temp, 0)+1);
+            if(map.get(temp)==2) {
     			return true;
     		}
     		temp = temp.next;
