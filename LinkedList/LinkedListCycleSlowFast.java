@@ -56,8 +56,6 @@ public class LinkedListCycleSlowFast {
 
     public static void main(String[] args) {
         int arr[] = {1,2,3,4,5};
-        int target = 2;
-
         Node head = createLL(arr);
         System.out.println(findLoop(head));
     }
