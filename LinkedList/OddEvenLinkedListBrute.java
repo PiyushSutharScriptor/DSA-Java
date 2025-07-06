@@ -39,6 +39,9 @@ public class OddEvenLinkedListBrute {
     }
 
     public static Node oddEvenLL(Node head) {
+
+        if(head==null || head.next==null) return head;
+
         ArrayList<Integer> list = new ArrayList<>();
         
         Node slow = head;
