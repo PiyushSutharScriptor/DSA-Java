@@ -69,10 +69,7 @@ public class RemoveNthElementFromEndBrute {
             temp = temp.next;
         }
 
-        Node delNode = temp.next;
-        
         temp.next = temp.next.next;
-        delNode.next = null;
         
         return head;
     }
