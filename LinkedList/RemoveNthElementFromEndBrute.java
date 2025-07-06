@@ -40,7 +40,9 @@ public class RemoveNthElementFromEndBrute {
 
     public static Node removeNthNode(Node head , int n) {
         
-        if(head==null || head.next==null) return head;
+        if(n==1){
+            if(head==null || head.next==null) return null;
+        }
         
         Node temp = head;
         int count = 0;
