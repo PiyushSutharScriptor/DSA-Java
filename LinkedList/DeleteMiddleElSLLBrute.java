@@ -38,7 +38,7 @@ public class DeleteMiddleElSLLBrute{
     }
 
     public static Node deleteMiddleEl(Node head){
-        if(head==null || head.next==null) return head;
+        if(head==null || head.next==null) return null;
         Node temp = head;
         int count=0;
         
