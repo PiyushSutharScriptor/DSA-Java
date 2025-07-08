@@ -15,7 +15,7 @@ class Node {
 	}
 }
 
-public class SortSLL0s1s2sBetter{
+public class SortSLL0s1s2sOptimized{
 
 	public static Node createLL(int arr[]) {
 		Node head = new Node(arr[0]);
