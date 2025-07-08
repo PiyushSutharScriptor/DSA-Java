@@ -69,11 +69,15 @@ public class SortSLL0s1s2sBetter{
 	         temp = temp.next;
 	     }
 	     
-	     temp0.next = d1.next;
-	     temp1.next = d2.next;
-	     temp2.next = null;
+	    if(d1.next!=null) temp0.next = d1.next;
+	    else temp0.next = d2.next;
 	     
-	     return d0.next;
+	    if(d2.next!=null) temp1.next = d2.next;
+	    else temp1.next = null;
+	     
+	    temp2.next = null;
+	     
+	    return d0.next;
 	}
 	
 	public static void main(String[] args) {
