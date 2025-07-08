@@ -39,6 +39,9 @@ public class SortSLL0s1s2sBetter{
 	}
 
 	public static Node sortSLL(Node head) {
+
+        if(head==null || head.next==null) return head;
+
 	     Node d0 = new Node(-1);
 	     Node d1 = new Node(-1);
 	     Node d2 = new Node(-1);
