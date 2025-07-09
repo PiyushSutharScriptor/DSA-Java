@@ -13,7 +13,7 @@ class Node{
     }
 }
 
-public class AddTwoLinkedListBetter {
+public class AddTwoLinkedListElementsBetter {
 
     public static Node createLL(int arr[]){
         Node head = new Node(arr[0]);
