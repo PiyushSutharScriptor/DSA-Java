@@ -59,7 +59,6 @@ public class RemoveDuplicFromDLLBetter{
                 t2.next = null;
                 t2.back = null;
                 
-                // t1 = t1.next.next;
             }
             else{
                 t1 = t1.next;
