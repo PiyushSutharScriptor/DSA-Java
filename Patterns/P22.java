@@ -5,6 +5,7 @@ public class P22 {
         for (int i = 0; i < n; i++) {
 
             //when even = 0
+            //when odd = 1
             int val = (i % 2 == 0) ? 1 : 0; 
             for (int j = 0; j <= i; j++) {
                 System.out.print(val + " ");
