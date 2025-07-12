@@ -17,6 +17,7 @@ public class FlattenSllWithChildNodeOptimized {
     
         if (head == null || (head.next == null && head.child == null)) return head;
 
+        //Option : 01
         Node temp = head;
         Node mover = head.next;
         
@@ -26,6 +27,13 @@ public class FlattenSllWithChildNodeOptimized {
         }
         
         return temp;
+
+
+        // Option : 02
+        /* 
+        head.next = flattenLL(head.next);
+        return flattenTwo(head,head.next);
+        */ 
     }
     
     public static Node flattenTwo(Node list1 , Node list2){
