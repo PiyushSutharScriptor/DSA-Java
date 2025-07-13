@@ -26,13 +26,14 @@ public class CloneLLWithRandomPointerOptimized {
             temp = temp.next.next;
         }
 
+        //random nodes
         temp = head;
         while(temp!=null){
             if(temp.random!=null) temp.next.random = temp.random.next;
             temp = temp.next.next;
         }
 
-        
+        //next nodes
         temp = head;
         Node newList = new Node(-1);
         Node res = newList;
