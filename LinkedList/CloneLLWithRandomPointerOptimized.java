@@ -18,7 +18,7 @@ public class CloneLLWithRandomPointerOptimized {
         
         Node temp = head;
 
-        //copy nodes
+        //copy nodes logic
         while(temp!=null){
             Node copyNode = new Node(temp.data);
             copyNode.next = temp.next;
@@ -26,14 +26,14 @@ public class CloneLLWithRandomPointerOptimized {
             temp = temp.next.next;
         }
 
-        //random nodes
+        //random nodes logic
         temp = head;
         while(temp!=null){
             if(temp.random!=null) temp.next.random = temp.random.next;
             temp = temp.next.next;
         }
 
-        //next nodes
+        //next nodes logic
         temp = head;
         Node newList = new Node(-1);
         Node res = newList;
