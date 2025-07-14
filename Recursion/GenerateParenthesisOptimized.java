@@ -1,7 +1,7 @@
 import java.util.*;
 
 class GenerateParenthesisOptimized {
-    public static void generateParenthesise(int n) {
+    public static void generateParenthesis(int n) {
         List<String> result = new ArrayList<>();
         StringBuilder current = new StringBuilder();
         backtrack(result,current, 0, 0, n);
