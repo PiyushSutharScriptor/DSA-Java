@@ -2,21 +2,19 @@ import java.util.*;
 public class CombinationSumOptimized
 {
     
-    public static void generateSubset(int start , List<List<Integer>> list, List<Integer>newAdd , int[] arr , int target){
-        if(start==arr.length){
-            if(target==0){
-                list.add(new ArrayList<>(newAdd));
-            }
+    public static void generateSubset(int idx , List<List<Integer>> list, List<Integer>newAdd , int[] arr , int target){
+        if(target==0){
+            list.add(new ArrayList<>(newAdd));
             return;
         }
         
-        if(arr[start]<=target){
-            newAdd.add(arr[start]);
-            generateSubset(start,list,newAdd,arr,target-arr[start]);
+        if(target<0) return;
+        
+        for(int i=idx ; i<arr.length ; i++){
+            newAdd.add(arr[i]);
+            generateSubset(idx,list,newAdd,arr,target-arr[i]);
             newAdd.remove(newAdd.size()-1);
         }
-        generateSubset(start+1,list,newAdd,arr,target);
-        
     }
     
 	public static void main(String[] args) {
