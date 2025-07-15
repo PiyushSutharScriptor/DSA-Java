@@ -12,7 +12,7 @@ public class CombinationSumOptimized
         
         for(int i=idx ; i<arr.length ; i++){
             newAdd.add(arr[i]);
-            generateSubset(idx,list,newAdd,arr,target-arr[i]);
+            generateSubset(i,list,newAdd,arr,target-arr[i]);
             newAdd.remove(newAdd.size()-1);
         }
     }
