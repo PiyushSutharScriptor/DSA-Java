@@ -1,5 +1,5 @@
 import java.util.*;
-public class SubsetsSumPart2Optimized
+public class SubsetsWithoutDuplicatesPart2Optimized
 {
     public static void findSubset(int[] arr){
         List<List<Integer>> list = new ArrayList<>();
