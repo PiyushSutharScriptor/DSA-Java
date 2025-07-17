@@ -22,6 +22,7 @@ public class PalindromeSubSetsBetter
     
     }
     
+    //less efficient as it checks for every iteration O(n)
     public static boolean isPalindrome(String s , int start, int end){
         Boolean res = true;
         
