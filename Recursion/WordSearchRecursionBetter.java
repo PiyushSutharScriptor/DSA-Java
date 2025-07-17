@@ -18,13 +18,16 @@ public class WordSearchRecursionBetter
 
     public static boolean findWord(char[][]board, String word, int i, int j, int idx,int m, int n){
         
+        //base case
         if(idx==word.length()) return true;
 
+        //boundary case
         if(i<0 || j<0 || i>=m || j>=n || board[i][j]!=word.charAt(idx)) return false;
 
         char temp = board[i][j];
         board[i][j] = '#';
 
+        //recursion
         Boolean found = findWord(board,word,i+1,j,idx+1,m,n) || 
                         findWord(board,word,i,j+1,idx+1,m,n) || 
                         findWord(board,word,i-1,j,idx+1,m,n) || 
