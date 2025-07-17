@@ -11,6 +11,7 @@ public class PalindromeSubSetsOptimized
             return;
         }
         
+        //more efficient then isPalindrome fun.
         for(int i=idx ; i<s.length() ; i++){
             if(s.charAt(idx)==s.charAt(i) && (i-idx<=2 || dp[idx+1][i-1]) ){
                 dp[idx][i] = true;
