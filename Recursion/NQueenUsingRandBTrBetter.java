@@ -27,7 +27,7 @@ public class NQueenUsingRandBTrBetter
         int drow = row;
         int dcol = col;
             
-        // top diag
+        // top diagonal
         while(row>=0 && col>=0){
             if(board[row][col]=='Q') return false;
             row--;
@@ -36,13 +36,13 @@ public class NQueenUsingRandBTrBetter
         
         row = drow;
         col = dcol;
-        //left col
+        //left column
         while(col>=0){
             if(board[row][col] == 'Q') return false;
             col--;
         }
         
-        // down diag
+        // down diagonal 
         row = drow;
         col = dcol;
         while(row<n && col>=0){
