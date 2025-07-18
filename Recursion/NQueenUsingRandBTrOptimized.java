@@ -14,15 +14,19 @@ public class NQueenUsingRandBTrOptimized
         }
         
         for(int col= 0 ; col<n ; col++){
+            //case
             if(cols.contains(col) || posD.contains(row+col) || negD.contains(row-col)) continue;
             
+            //place
             board[row][col] = 'Q';
             cols.add(col);
             posD.add(row+col);
             negD.add(row-col);
-            
+
+            //recursion
             generateCombination(row+1, ans, posD, negD, cols, board, n);
             
+            //backtracking
             board[row][col] = '.';
             cols.remove(col);
             posD.remove(row+col);
