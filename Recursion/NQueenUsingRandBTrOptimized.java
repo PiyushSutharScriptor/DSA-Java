@@ -31,8 +31,6 @@ public class NQueenUsingRandBTrOptimized
         }
     }
     
-    
-    
 	public static void main(String[] args) {
 	    int n = 4;
         List<List<String>> ans = new ArrayList<>();
