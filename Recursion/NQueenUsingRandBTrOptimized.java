@@ -2,71 +2,53 @@ import java.util.*;
 
 public class NQueenUsingRandBTrOptimized
 {
-    public static void generateCombination(int col , List<List<String>> solveNQueens , char[][] board , int n){
+    public static void generateCombination(int row , List<List<String>> ans, Set<Integer> posD, Set<Integer> negD, Set<Integer> cols , char[][] board , int n){
         //base case : 
-        if(col==n){
+        if(row==n){
             List<String> newAdd = new ArrayList<>();
-            for(char[] row : board){
-                newAdd.add(new String(row));
+            for(char[] r : board){
+                newAdd.add(new String(r));
             }
-            solveNQueens.add(newAdd);    
+            ans.add(newAdd);    
             return;
         }
         
-        for(int row=0 ; row<n ; row++){
-            if(isSafePlace(row,col,board,n)){
-                board[row][col] = 'Q';
-                generateCombination(col+1,  solveNQueens,board,n);
-                board[row][col] = '.';
-            }
-        }    
+        for(int col= 0 ; col<n ; col++){
+            if(cols.contains(col) || posD.contains(row+col) || negD.contains(row-col)) continue;
+            
+            board[row][col] = 'Q';
+            cols.add(col);
+            posD.add(row+col);
+            negD.add(row-col);
+            
+            generateCombination(row+1, ans, posD, negD, cols, board, n);
+            
+            board[row][col] = '.';
+            cols.remove(col);
+            posD.remove(row+col);
+            negD.remove(row-col);
+            
+        }
     }
     
-    public static boolean isSafePlace(int row, int col , char[][] board , int n ){
-        //base case 
-        int drow = row;
-        int dcol = col;
-            
-        // top diag
-        while(row>=0 && col>=0){
-            if(board[row][col]=='Q') return false;
-            row--;
-            col--;
-        }
-        
-        row = drow;
-        col = dcol;
-        //left col
-        while(col>=0){
-            if(board[row][col] == 'Q') return false;
-            col--;
-        }
-        
-        // down diag
-        row = drow;
-        col = dcol;
-        while(row<n && col>=0){
-            if(board[row][col] == 'Q') return false;
-            row++;
-            col--;
-        }
-        
-        return true;
-        
-    }
+    
     
 	public static void main(String[] args) {
 	    int n = 4;
-        List<List<String>> solveNQueens = new ArrayList<>();
+        List<List<String>> ans = new ArrayList<>();
         
         char [][] board = new char[n][n];
         
         for(char[] row : board){
             Arrays.fill(row,'.');
         }
-           
-        generateCombination(0,solveNQueens , board, n);
         
-        System.out.println(solveNQueens);
+        Set<Integer> posD = new HashSet<>();
+        Set<Integer> negD = new HashSet<>();
+        Set<Integer> cols = new HashSet<>();
+        
+        generateCombination(0, ans, posD, negD, cols, board, n);
+        
+        System.out.println(ans);
 	}
 }
