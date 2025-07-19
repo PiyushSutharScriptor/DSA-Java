@@ -15,12 +15,14 @@ public class RateInMazeOptimized
         
         visited[x][y] = true;
         
-        
+        //Down
         findCombination(x+1,y,arr,res,visited,n,newAdd+"D");
+        //Right
         findCombination(x,y+1,arr,res,visited,n,newAdd+"R");
+        //Left
         findCombination(x,y-1,arr,res,visited,n,newAdd+"L");
+        //Up
         findCombination(x-1,y,arr,res,visited,n,newAdd+"U");
-        
         
         visited[x][y] = false;
         
