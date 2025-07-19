@@ -17,6 +17,7 @@ public class WordBreakUsingDPOptimized
 	    
 	    for(int i=1 ; i<=s.length() ; i++){
 	        for(int j=0 ; j<i ; j++){
+                // here the i will be one greater then j to form the substring
 	            if(b[j] && word.contains(s.substring(j,i))){
 	                b[i]=true;
 	                break;
