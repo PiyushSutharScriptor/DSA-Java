@@ -57,10 +57,12 @@ public class SudokoSolverOptimizedBoard
                             ,{'.','.','.','.','8','.','.','7','9'}  };
                             
         
-        findValid(board);
+        findValid(board); //modifying the board
         
         int n = board.length;
         
+
+        //printing the final board
         for(int i=0 ; i<n ; i++){
             for(int j=0 ; j<n ; j++){
                 System.out.print(board[i][j]+ " ");
