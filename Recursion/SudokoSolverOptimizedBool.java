@@ -34,11 +34,11 @@ public class SudokoSolverOptimizedBool
     public static boolean isPossible(char[][] board, int row, int col , char k){
         for(int p=0 ; p<9 ; p++){
             
-            //row 
+            //row condition
             if((board[row][p])==k) return false;
-            //col 
+            //col condition
             if((board[p][col])==k) return false;
-            //matrix
+            //matrix condition
             if(board[3*(row/3)+p/3][3*(col/3)+p%3]==k) return false;
             
         }
