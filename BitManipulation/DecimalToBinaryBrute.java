@@ -1,4 +1,3 @@
-package BitManipulation;
 
 public class DecimalToBinaryBrute
 {

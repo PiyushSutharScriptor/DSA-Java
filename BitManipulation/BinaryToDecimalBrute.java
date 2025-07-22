@@ -1,5 +1,3 @@
-package BitManipulation;
-
 public class BinaryToDecimalBrute
 {
 	public static void main(String[] args) {

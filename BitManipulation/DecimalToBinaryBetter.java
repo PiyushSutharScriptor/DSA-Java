@@ -1,5 +1,3 @@
-package BitManipulation;
-
 public class DecimalToBinaryBetter
 {
 	public static void main(String[] args) {

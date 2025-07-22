@@ -1,5 +1,3 @@
-package BitManipulation;
-
 public class BinaryToDecimalOptimized
 {
 	public static void main(String[] args) {
