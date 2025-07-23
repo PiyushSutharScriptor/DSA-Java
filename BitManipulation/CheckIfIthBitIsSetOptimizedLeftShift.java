@@ -1,5 +1,5 @@
 
-public class CheckIfIthBitIsSetOptimized
+public class CheckIfIthBitIsSetOptimizedLeftShift
 {
 	public static void main(String[] args) {
 	    int n = 13;
