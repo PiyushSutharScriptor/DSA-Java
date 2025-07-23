@@ -1,5 +1,7 @@
-public class RemoveTheLastSetBitBrute {
+public class RemoveTheLastSetBitBruteRM {
     public static void main(String[] args) {
+        //remove the right most set bit
+
         int n = 9;
 
         // converting decimal to binary : 
