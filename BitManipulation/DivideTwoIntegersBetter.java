@@ -1,4 +1,3 @@
-import java.util.*;
 
 public class DivideTwoIntegersBetter {
     public static int divideN(int dividend, int divisor) {
