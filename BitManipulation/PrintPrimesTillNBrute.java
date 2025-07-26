@@ -6,10 +6,8 @@ public class PrintPrimesTillNBrute {
 
         List<Integer> li = new ArrayList<>();
 
-        for (int i = 1; i <= n; i++) {
-            if (i == 1)
-                continue;
-            else if (i == 2)
+        for (int i = 2; i <= n; i++) {
+            if(i == 2)
                 li.add(i);
             else {
                 boolean isPrime = true;
