@@ -1,7 +1,14 @@
 Stack Functions : 
 push() 
 pop()
-top()
+peek() or top
 size()
+isEmpty()
 
 Queue Functions : 
+add()
+remove()
+peek() or to
+size()  
+isEmpty()
+
