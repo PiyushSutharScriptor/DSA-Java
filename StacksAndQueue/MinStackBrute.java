@@ -19,6 +19,7 @@ public class MinStackBrute{
     public int getMin() {
         int min = Integer.MAX_VALUE;
 
+        // tc = O(n)
         for(int i=0 ; i<st.size() ; i++){
             if(st.elementAt(i)<min) min = st.elementAt(i);
         }        
