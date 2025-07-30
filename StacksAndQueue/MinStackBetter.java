@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class MinStackBetter {
-    private Stack<Map.Entry<Integer,Integer>> st = new Stack<>();
+    private Stack<Map.Entry<Integer,Integer>> st = new Stack<>(); //key,value
     private int mini = Integer.MAX_VALUE;
 
     public void push(int val) {
