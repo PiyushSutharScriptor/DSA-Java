@@ -7,13 +7,13 @@ public class MinStackOptimized {
     public void push(int val) {
         if(st.isEmpty()){
             st.push(val);
-            mini = Math.min(mini,val);
+            mini = val;
         }
         else{
-            if(st.peek()>val){
+            if(val<mini){
                 int newVal = 2*val-mini;
                 st.push(newVal);
-                mini = Math.min(mini,val);
+                mini = val;
             }
             else{
                 st.push(val);
@@ -22,12 +22,12 @@ public class MinStackOptimized {
     }
     
     public void pop() {
-        if(mini>st.peek()){
-            mini = 2*mini-st.peek();
-            st.pop();
-        }
-        else{
-            st.pop();
+        if(st.isEmpty()) return;
+
+        int top = st.pop();
+
+        if(top<mini){
+            mini = 2*mini-top;
         }
     }
     
