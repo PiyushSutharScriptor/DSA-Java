@@ -27,5 +27,9 @@ public class MinStackBetter {
         s1.push(30);
 
         System.out.println(s1.getMin());
+        s1.pop();
+        System.out.println(s1.getMin());
+
+
     }
 }
