@@ -12,3 +12,14 @@ peek() or to
 size()  
 isEmpty()
 
+Infix : 
+(a+b)*(c-d) the operators are inbetween(in) the operands
+
+Prefix : 
+*+pq+-mn-*/ the operators are before(pre) the operands
+
+Postfix : 
+ab+mn-* the operators are after(post) the operands
+
+
+
