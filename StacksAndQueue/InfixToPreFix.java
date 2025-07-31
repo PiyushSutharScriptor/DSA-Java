@@ -44,6 +44,11 @@ public class InfixToPreFix {
                 st.push(ch);
             }
             else if(ch=='('){
+
+                // note : this step is reversed, we can replace the brackets 
+                // of '('with')' and ')'with'(' and keep this else if block 
+                // same as the InfixToPostFix logic
+
                 while(!st.isEmpty() && st.peek()!=')'){
                     res.append(st.pop());
                 }

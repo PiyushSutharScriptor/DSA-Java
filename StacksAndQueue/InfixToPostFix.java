@@ -42,7 +42,7 @@ public class InfixToPostFix {
                 st.pop();
             }
             else{
-                while(!st.isEmpty() && priority(ch)<priority(st.peek())){
+                while(!st.isEmpty() && priority(ch)<=priority(st.peek())){
                     res+=st.pop();
                 }
                 st.push(ch);
