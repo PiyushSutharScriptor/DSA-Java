@@ -19,7 +19,7 @@ public class PostfixToInfix
 	            String a = st.pop();
 	            String b = st.pop();
 	            
-	            String c = "("+a+ch+b+")";
+	            String c = "("+b+ch+a+")";
 	            st.push(c);
 	        }
 	    }
