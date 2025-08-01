@@ -30,6 +30,7 @@ public class InfixToPreFix {
         StringBuilder res = new StringBuilder();
         
         
+        //LOGIC
         for(int i=0 ; i<str.length() ; i++){
             char ch = str.charAt(i);
             
