@@ -20,6 +20,7 @@ public class PrefixToPostfix
 	            String a = st.pop();
 	            String b = st.pop();
 	            
+				// MAIN LINE
 	            String c = b+a+ch;
 	            st.push(c);
 	        }
