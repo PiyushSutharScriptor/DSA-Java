@@ -6,6 +6,7 @@ public class NextGreaterElementBrute {
       int arr[] = {6,0,8,1,3};
       int n = arr.length;
       
+    //   o(N^2)
       for(int i=0 ; i<n-1 ; i++){
         boolean found = false;
         for(int j=i+1 ; j<n ; j++){
