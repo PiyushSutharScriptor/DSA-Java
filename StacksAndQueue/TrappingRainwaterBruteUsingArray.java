@@ -22,7 +22,7 @@ public class TrappingRainwaterBruteUsingArray
 	       
 	       if(lmax>arr[i] && rmax>arr[i]){
 	           int sub = Math.min(lmax,rmax);
-	           count+=sub-arr[i];
+	           count+=sub-arr[i]; //subtracting by min of lmax and rmax
 	       }
 	    }
 	    
