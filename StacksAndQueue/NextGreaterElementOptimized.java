@@ -37,7 +37,7 @@ public class NextGreaterElementOptimized {
       }
       
       for(int e : arr){
-        System.out.println(e);
+        System.out.print(e + " ");
       }
   }
 }
