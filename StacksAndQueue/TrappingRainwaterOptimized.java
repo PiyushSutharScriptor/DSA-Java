@@ -1,6 +1,4 @@
-import java.util.*;
-
-public class TrappingRainwaterBetterUsingArray
+public class TrappingRainwaterOptimized
 {
 	public static void main(String[] args) {
 	    int arr[] = {0,1,0,2,1,0,1,3,2,1,2,1};
@@ -8,7 +6,7 @@ public class TrappingRainwaterBetterUsingArray
 	    
 	    int count=0;
 	    
-	    int lmax=0, rmax=0, total=0;
+	    int lmax=0, rmax=0;
 	    
 	    int l=0;
 	    int r=n-1;
