@@ -21,6 +21,9 @@ public class RemoveKDigits{
 
         StringBuilder result = new StringBuilder();
 
+        //leading zero is the zero at the starting of the number 
+        // like : 01252 is converted to 1252
+        
         boolean lzero = true;
         for (char c : st) {
             if(lzero && c=='0') continue;
