@@ -1,5 +1,6 @@
 import java.util.*;
 
+//must understand the logic of nse, nge, pse, and pge
 class Solution {
     public long subArrayRanges(int[] nums) {
         return sumOfMax(nums) - sumOfMin(nums);
