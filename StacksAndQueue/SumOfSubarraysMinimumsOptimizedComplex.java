@@ -1,4 +1,6 @@
 import java.util.*;
+//must understand the logic of nse, nge, pse, and pge
+
 class SumOfSubarraysMinimumsOptimizedComplex {
     public static int sumSubarrayMins(int[] arr) {
         int n = arr.length;
