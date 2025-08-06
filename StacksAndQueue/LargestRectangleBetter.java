@@ -55,6 +55,8 @@ public class LargestRectangleBetter{
         int arr[] = {2,1,5,6,2,3};
         int n = arr.length;
 
+        //we are using indexes not autal values 
+        //the nse[] and pse[] stores the indexes of values not actual value
         int nse[] = findNse(arr);
         int pse[] = findPse(arr);
         int maxi = Integer.MIN_VALUE;
