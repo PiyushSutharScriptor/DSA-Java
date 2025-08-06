@@ -5,11 +5,17 @@ public class PreviousSmallerElementBrute{
         int n = arr.length;
 
         for(int i=0 ; i<n ; i++){
+            boolean find = false;
+
             for(int j=i-1 ; j>=0 ; j--){
                 if(arr[j]<arr[i]){
                     arr[i] = arr[j];
+                    find = true;
+                    break;
                 }
             }
+
+            if(!find) arr[i]=-1;
         }
 
         for(int e : arr){
