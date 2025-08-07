@@ -28,5 +28,15 @@ public class SlidingWindowMaximumOptimized {
 
         System.out.println(li);
 
+        //notes : 
+        /*
+            functions used : 
+            -> peekFirst() 
+            -> peekLast()
+            -> removeFirst()
+            -> removeLast()
+            -> isEmpty()
+        */
+
     }
 }
