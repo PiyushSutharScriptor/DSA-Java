@@ -41,6 +41,7 @@ public class CelebrityProblemBrute {
             }
         }
 
+        //the celebrity will only possible if a and b are same 
         if(a==b && a!=-1 && a!=-1){
             System.out.println("Found element : " + a);
         }
