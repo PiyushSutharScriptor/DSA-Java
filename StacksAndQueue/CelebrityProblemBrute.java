@@ -30,23 +30,23 @@ public class CelebrityProblemBrute {
 
         System.out.println();
         
-        int a=-1;
-        int b=-1;
+        int ans=-1;
+        boolean find = false;
 
         for(int i=0 ; i<n ; i++){
             if(knowsMe[i]==n-1 && iKnows[i]==0){
-                a=i;
-                b=i;
+                ans=i;
+                find = true;
                 break;
             }
         }
 
         //the celebrity will only possible if a and b are same 
-        if(a==b && a!=-1 && a!=-1){
-            System.out.println("Found element : " + a);
+        if(!find){
+            System.out.println("Not found : " + -1);
         }
         else{
-            System.out.println("Not found : " + -1);
+            System.out.println("Found element : " + ans);
         }
     }
 }
