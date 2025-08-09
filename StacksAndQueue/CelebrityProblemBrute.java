@@ -3,7 +3,6 @@ public class CelebrityProblemBrute {
         int arr[][] = {{0,1,1,0},{0,0,0,0},{0,1,0,0},{1,1,0,0}};
 
         int n = arr.length;
-
         int knowsMe[] = new int[n];
         int iKnows[] = new int[n];
 
