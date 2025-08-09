@@ -3,7 +3,6 @@ public class CelebrityProblemOptimized {
         int arr[][] = {{0,1,1,0},{0,0,0,0},{0,1,0,0},{1,1,0,0}};
 
         int n = arr.length;
-
         int top = 0;
         int bottom = n-1;
 
