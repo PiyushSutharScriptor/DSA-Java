@@ -6,6 +6,7 @@ public class CelebrityProblemOptimized {
         int top = 0;
         int bottom = n-1;
 
+        // condition until bottom crosses top
         while(top<bottom){
             if(arr[top][bottom]==1) top++;
             else if(arr[bottom][top]==1) bottom--;
