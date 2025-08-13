@@ -1,4 +1,4 @@
-public class LongestRepeatCharacterReplacement {    
+public class LongestRepeatCharacterReplacementBrute {    
     public static void main(String[] args) {
         String s = "BABABA";  
         int n = s.length();
