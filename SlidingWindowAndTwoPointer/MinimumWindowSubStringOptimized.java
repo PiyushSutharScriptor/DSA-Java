@@ -37,7 +37,7 @@ public class MinimumWindowSubStringOptimized {
         }
 
         if(start == -1){
-            System.out.println("No window found");
+            System.out.println("No window found"); //empty string
         } else {
             System.out.println(s.substring(start, end+1));
         }
