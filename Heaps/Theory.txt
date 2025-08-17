@@ -11,3 +11,19 @@ CBT = It is a tree where every parent has atmost 2 childs
 4. Parent = i/2
 
 Note : i are the indexes of array
+
+
+
+//Insert steps : 
+1. Add the element in array (last)
+2. Compare it with its parents element
+3. Swap if the element>Parent (Keep on doing until idx>1)
+
+//Delete steps(roott) : 
+1. Assign arr[size] to arr[1] (root is assigned by last element)
+2. Decrease the size (size--)
+3. Compare it with its Left and Right child 
+4. keep on swapping (largest and idx) until the next child exists
+
+
+
