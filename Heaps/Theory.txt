@@ -4,11 +4,19 @@ CBT = It is a tree where every parent has atmost 2 childs
       Every level is completely filled accept last level
       Nodes are always added from the left
 
-// Important formulas (view tree to understand formulas)
+// Important formulas 1 based index (see tree to understand formulas)
 1. Node = i
 2. Child(left) = 2*i
 3. Child(right) = 2*i+1
 4. Parent = i/2
+5. Leaf nodes = n/2+1 -> n
+
+// Important formulas 0 based index(see tree to understand formulas)
+1. Node = i
+2. Child(left) = 2*i+1
+3. Child(right) = 2*i+2
+4. Parent = (i-1)/2
+5. Leaf nodes = n/2-1 -> n
 
 Note : i are the indexes of array
 
