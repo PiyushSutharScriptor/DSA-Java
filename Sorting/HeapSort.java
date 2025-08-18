@@ -5,6 +5,9 @@ public class HeapSort {
 
         int n = arr.length;
 
+        /*Note : if the arr is not in heap then first build the heap 
+        then perform the below operation*/
+
         int size = n-1;
         while(size>0){
             //step : 1 swap first and last element

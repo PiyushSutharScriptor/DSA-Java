@@ -3,6 +3,8 @@ public class HeapSort {
     public static void main(String[] args) {
         int arr[] = {70,60,55,45,50};
 
+        /*Note : if the arr is not in heap then first build the heap 
+        then perform the below operation*/
         int n = arr.length;
 
         int size = n-1;
