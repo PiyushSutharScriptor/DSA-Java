@@ -1,3 +1,4 @@
+// 0 based indexing
 public class HeapSort {
     public static void main(String[] args) {
         int arr[] = {70,60,55,45,50};
