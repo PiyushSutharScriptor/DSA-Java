@@ -34,4 +34,6 @@ Note : i are the indexes of array
 4. keep on swapping (largest and idx) until the next child exists
 
 
+//Priority queues 
+1. It is min-heap based
 
