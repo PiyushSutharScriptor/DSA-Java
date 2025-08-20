@@ -25,5 +25,15 @@ public class MergeKSortedArrayBrute {
         
         t--; 
       }
+
+      /*
+        Take input like this 
+          1
+          2
+          3 
+          3 5 9 
+          4 
+          1 2 3 8 
+       */
   }
 }
