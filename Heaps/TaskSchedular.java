@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class TaskSchedularBrute {
+public class TaskSchedular {
 
     public static int leastInterval(char[] arr , int n){
         
