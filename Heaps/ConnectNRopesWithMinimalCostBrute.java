@@ -18,3 +18,5 @@ public class ConnectNRopesWithMinimalCostBrute {
         System.out.println(res);
     }
 }
+
+// Note this is not accurate (use the min heap optimized for this solution)
