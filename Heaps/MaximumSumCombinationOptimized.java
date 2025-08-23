@@ -54,5 +54,7 @@ public class MaximumSumCombinationOptimized {
         }
 
         System.out.println(result);
+
+        //dry run the whole example for understanding 
     }
 }
