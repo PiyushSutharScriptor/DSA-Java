@@ -27,6 +27,7 @@ public class FractionalKnapSackAlgoOptimized {
             double r1 = (double) p1.num/p1.den;
             double r2 = (double) p2.num/p2.den;
             return Double.compare(r2,r1);
+            //for descending order r2,r1 and for ascending order r1,r2
         });
 
         int i=0;
