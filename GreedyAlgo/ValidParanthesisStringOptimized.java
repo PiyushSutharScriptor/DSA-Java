@@ -26,6 +26,7 @@ public class ValidParanthesisStringOptimized {
         
         return min==0; //if min has 0 then true is returned
     }
+    
     public static void main(String[] args) {
         String s = "(**()";
         System.out.println(findValid(s));
