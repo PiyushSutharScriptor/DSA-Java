@@ -19,8 +19,8 @@ public class ValidParanthesisStringBetter {
                    findValid(s, i+1, count-1) || 
                    findValid(s, i+1, count);
         }
-        
     }
+    
     public static void main(String[] args) {
         String s = "(**()";
         System.out.println(findValid(s,0,0));
