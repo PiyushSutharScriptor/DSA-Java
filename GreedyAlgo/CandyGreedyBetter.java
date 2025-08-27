@@ -8,7 +8,7 @@ public class CandyGreedyBetter {
         l[0] = 1;
 
         int count = 1;
-        
+
         for(int i=1 ; i<n ; i++){
             if(arr[i]>arr[i-1]){
                 count++;
@@ -20,20 +20,15 @@ public class CandyGreedyBetter {
             }
         }
 
-        int r[] = new int[n];
-        r[n-1] = 1;
-        
         count = 1;
         int candy = 0;
 
         for(int i=n-2 ; i>=0 ; i--){
             if(arr[i]>arr[i+1]){
                 count++;
-                r[i] = count;
             }
             else{
                 count = 1;
-                r[i] = count;
             }
             candy+=Math.max(l[i] , count);
         }
@@ -41,6 +36,7 @@ public class CandyGreedyBetter {
 
         System.out.println(candy+1); //the last candy (n-1) was not added 
 
-        // here TC = O(2N) for l[] and r[] and I eliminated the max loop
+        // here TC = O(2N) and SC = O(N) for l[] and the max loop , 
+        // we eliminated the r[] 
     }    
 }
