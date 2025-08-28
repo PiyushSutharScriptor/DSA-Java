@@ -1,0 +1,23 @@
+Binary tree : 
+    parent node
+    child node
+    root node
+    leaf node
+    ancestors nodes
+
+Subtree and going deep Subtree
+
+types of trees : 
+    1. Full binary tree
+    2. Complete binary tree
+    3. Perfect binary tree
+    4. Balanced binary tree
+    5. Degenerated binary tree
+
+Dfs : 
+    Types : 
+    InOrder traversal - left->root->right
+    PreOrder traversal - root->left->right
+    PostOrder traversal - left->right->root
+
+Bfs : traversal in each level completely 
