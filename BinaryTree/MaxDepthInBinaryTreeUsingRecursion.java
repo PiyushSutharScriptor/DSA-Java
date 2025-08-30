@@ -10,7 +10,7 @@ class Node{
     }
 }
 
-public class MaxDepthInBinaryTree {
+public class MaxDepthInBinaryTreeUsingRecursion {
 
     public static int depth(Node root){
         if(root==null){
