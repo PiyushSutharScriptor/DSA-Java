@@ -8,11 +8,11 @@ Binary tree :
 Subtree and going deep Subtree
 
 types of trees : 
-    1. Full binary tree
-    2. Complete binary tree
-    3. Perfect binary tree
-    4. Balanced binary tree
-    5. Degenerated binary tree
+    1. Full binary tree : 0 or 2 child
+    2. Complete binary tree : all the level should be fulled except last level && leaf node must start child from left 
+    3. Perfect binary tree : all the leaf nodes are at same level 
+    4. Balanced binary tree : the height of the tree is at max log(n)
+    5. Degenerated binary tree : in one direction skewed direction
 
 Dfs : 
     Types : 
