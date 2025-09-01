@@ -42,6 +42,5 @@ public class SameTreeOrNotOpttimized {
         System.out.println(check(root,root2));
 
         //consider different values to see false and vice versa 
-    }
- 
+    }       
 }
