@@ -11,12 +11,10 @@ class Node {
 
 public class BoundaryTraversalOptimized {
 
-    // Check leaf
     private static boolean isLeaf(Node node) {
         return (node.left == null && node.right == null);
     }
 
-    // Add left boundary (excluding leaves)
     private static void addLeftBoundary(Node root, List<Integer> res) {
         Node cur = root.left;
         while (cur != null) {
@@ -26,7 +24,6 @@ public class BoundaryTraversalOptimized {
         }
     }
 
-    // Add right boundary (excluding leaves, reverse later)
     private static void addRightBoundary(Node root, List<Integer> res) {
         Node cur = root.right;
         Stack<Integer> st = new Stack<>();
@@ -54,11 +51,11 @@ public class BoundaryTraversalOptimized {
         List<Integer> res = new ArrayList<>();
         if (root == null) return res;
 
-        if (!isLeaf(root)) res.add(root.data); // root
+        if (!isLeaf(root)) res.add(root.data);
 
-        addLeftBoundary(root, res);  // left boundary
-        addLeaves(root, res);        // leaves
-        addRightBoundary(root, res); // right boundary
+        addLeftBoundary(root, res);  
+        addLeaves(root, res);        
+        addRightBoundary(root, res); 
 
         return res;
     }
