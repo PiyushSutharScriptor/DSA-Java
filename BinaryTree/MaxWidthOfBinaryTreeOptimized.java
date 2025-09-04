@@ -47,6 +47,6 @@ public class MaxWidthOfBinaryTreeOptimized {
         root.right.left = new Node(7);
 
         int ans = findWidth(root);
-        System.out.println("Max Width (Optimized): " + ans);
+        System.out.println(ans);
     }
 }
