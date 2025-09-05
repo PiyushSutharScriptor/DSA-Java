@@ -1,41 +1,64 @@
 import java.util.*;
 
+class Node{
+    int data;
+    Node left;
+    Node right;
+    
+    Node(int data1){
+        this.data = data1;
+        this.left = null;
+        this.right = null;
+    }
+}
+
 class Pair {
     Node node;
-    int index;
-    Pair(Node n, int i) {
-        this.node = n;
-        this.index = i;
+    int num;
+    Pair(Node node1, int num1) {
+        this.node = node1;
+        this.num = num1;
     }
 }
 
 public class MaxWidthOfBinaryTreeOptimized {
 
-    // Optimized: BFS with position indexing
     public static int findWidth(Node root) {
-        if (root == null) return 0;
-
-        Queue<Pair> q = new LinkedList<>();
-        q.add(new Pair(root, 0));
-        int maxWidth = 0;
-
-        while (!q.isEmpty()) {
-            int size = q.size();
-            int minIndex = q.peek().index;
-            int first = 0, last = 0;
-
-            for (int i = 0; i < size; i++) {
-                Pair p = q.poll();
-                int currIndex = p.index - minIndex; // normalize to prevent overflow
-                if (i == 0) first = currIndex;
-                if (i == size - 1) last = currIndex;
-
-                if (p.node.left != null) q.add(new Pair(p.node.left, 2 * currIndex + 1));
-                if (p.node.right != null) q.add(new Pair(p.node.right, 2 * currIndex + 2));
+        if(root==null) return 0;
+        
+        int ans = 0;
+        
+        Queue<Pair> que = new LinkedList<>();
+        que.add(new Pair(root,0));
+        
+        while(!que.isEmpty()){
+            int size = que.size();
+            int mini = que.peek().num;
+            
+            int first = 0;
+            int last = 0;
+            
+            for(int i=0 ; i<size ; i++){
+                Pair p = que.poll();    
+                
+                int cmini = p.num-mini;
+                Node node = p.node;
+                
+                if(i==0) first = cmini;
+                if(i==size-1) last = cmini;
+                
+                if(node.left!=null){
+                    que.add(new Pair(node.left,2*cmini+1));
+                }
+                if(node.right!=null){
+                    que.add(new Pair(node.right,2*cmini+2));
+                }
             }
-            maxWidth = Math.max(maxWidth, last - first + 1);
+            
+            ans = Math.max(ans, last-first+1);
         }
-        return maxWidth;
+        
+        return ans; 
     }
 
     public static void main(String[] args) {
