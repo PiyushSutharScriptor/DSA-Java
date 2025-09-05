@@ -25,7 +25,7 @@ public class ChildrenSumPropertyOptimized {
         if(sum>root.data) root.data = sum;
         else{
             if(root.left!=null) root.left.data = root.data;
-            else if(root.right!=null) root.right.data = root.data;
+            if(root.right!=null) root.right.data = root.data;
         }
 
         childrenSum(root.left);
