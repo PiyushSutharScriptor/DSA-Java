@@ -20,4 +20,15 @@ Dfs :
     PreOrder traversal - root->left->right
     PostOrder traversal - left->right->root
 
-Bfs : traversal in each level completely 
+Bfs : traversal in each level completely (Level order traversal)
+
+Morris traversal PreOrder
+Morris traversal InOrder
+
+Top view nodes
+Bottom view nodes
+Left view nodes
+Right view nodes
+Boundary nodes
+
+
