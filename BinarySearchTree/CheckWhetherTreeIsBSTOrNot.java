@@ -14,13 +14,10 @@ public class CheckWhetherTreeIsBSTOrNot {
     public static boolean myFun(Node root){
         if(root==null) return true;
 
-        // check left subtree max < root
         if(!checkLeft(root.left, root.data)) return false;
 
-        // check right subtree min > root
         if(!checkRight(root.right, root.data)) return false;
 
-        // recursively check for left and right
         return myFun(root.left) && myFun(root.right);
     }
 
@@ -46,6 +43,6 @@ public class CheckWhetherTreeIsBSTOrNot {
         root.right.right = new Node(70);
 
         boolean ans = myFun(root);
-        System.out.println(ans);  // true for valid BST
+        System.out.println(ans);  
     }
 }
