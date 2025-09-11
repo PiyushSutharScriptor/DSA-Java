@@ -34,6 +34,6 @@ public class CheckWhetherTreeIsBSTOrNotOptimized {
         root.right.right = new Node(70);
 
         boolean ans = myFun(root);
-        System.out.println(ans);  // true for valid BST
+        System.out.println(ans);
     }
 }
