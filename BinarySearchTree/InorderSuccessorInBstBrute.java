@@ -1,5 +1,3 @@
-import java.util.*;
-
 class Node {
     int data;
     Node left;
@@ -36,7 +34,11 @@ public class InorderSuccessorInBstBrute {
         int k = 20;
 
         Node ans = myFun(root,k);
-        System.out.println(ans.data);
+
+        if(ans!=null){
+            System.out.println(ans.data);
+        }
+        else System.out.println("No Successor");
     }
 }
 
