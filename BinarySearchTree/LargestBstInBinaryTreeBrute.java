@@ -26,14 +26,14 @@ public class LargestBstInBinaryTreeBrute {
         return 1 + countNodes(root.left) + countNodes(root.right);
     }
 
-    public static int myFun(Node root) {
+    public static int findLarg(Node root) {
         if (root == null) return 0;
 
         if (isValidBST(root, Integer.MIN_VALUE, Integer.MAX_VALUE)) {
             return countNodes(root);  
         }
 
-        return Math.max(myFun(root.left), myFun(root.right));
+        return Math.max(findLarg(root.left), findLarg(root.right));
     }
 
     public static void main(String[] args) {
@@ -45,7 +45,7 @@ public class LargestBstInBinaryTreeBrute {
         root.right.left = new Node(50);
         root.right.right = new Node(70);
 
-        int ans = myFun(root);
+        int ans = findLarg(root);
         System.out.println(ans); 
     }
 }
