@@ -9,12 +9,12 @@ class Node {
     }
 }
 
-// Helper class to store information
+
 class Info {
     boolean isBST;
-    int size;   // size of current subtree if BST
-    int min;    // min value in subtree
-    int max;    // max value in subtree
+    int size;   
+    int min;    
+    int max;    
 
     Info(boolean isBST, int size, int min, int max) {
         this.isBST = isBST;
@@ -41,7 +41,6 @@ public class LargestBstInBinaryTreeOptimized {
         Info left = helper(root.left);
         Info right = helper(root.right);
 
-        // if left and right are BSTs and root is valid
         if (left.isBST && right.isBST && root.data > left.max && root.data < right.min) {
             int currSize = left.size + right.size + 1;
             maxSize = Math.max(maxSize, currSize);
@@ -50,7 +49,6 @@ public class LargestBstInBinaryTreeOptimized {
                             Math.max(root.data, right.max));
         }
 
-        // otherwise, not a BST
         return new Info(false, 0, 0, 0);
     }
 
@@ -64,6 +62,6 @@ public class LargestBstInBinaryTreeOptimized {
         root.right.right = new Node(70);
 
         int ans = myFun(root);
-        System.out.println(ans);  // Output: 7 (whole tree is a BST)
+        System.out.println(ans);
     }
 }
