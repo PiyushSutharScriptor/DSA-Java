@@ -1,0 +1,21 @@
+Key words : 
+
+Directed Graph 
+Undirected Graph
+
+Directed cyclic graph 
+Undirected cyclic graph
+
+Path = contains nodes and all are reachable 
+
+Undirected Graph : 
+Degree = the number of edges in and out of a node
+Total degree of graph = 2*no.of edges
+
+Directed Graph : 
+Indegree = no. of edges coming towards node
+Outdegree = no. of edges leaving from node
+
+Weighted Graph : 
+Values associated for the edges.
+if there is no weight for edges then default unit weight is taken.
