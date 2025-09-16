@@ -38,6 +38,9 @@ public class BreadthFirstSearchInGraphs {
         }
 
         return res;
+
+        //you can seperate the logic of for loop inside while
+        // using helper function for more clarity
     }
 
     public static void helper(int i, boolean[] visited, List<List<Integer>> li, Queue<Integer> que) {
