@@ -1,4 +1,4 @@
-public class SurrondingRegionsReplaceXwithO {
+public class SurrondingRegionsReplaceXwithOUsingDFS{
 
     public static void convertRegion(char[][] board){
         int m = board.length;
