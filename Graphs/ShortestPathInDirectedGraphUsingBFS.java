@@ -59,7 +59,7 @@ public class ShortestPathInDirectedGraphUsingBFS {
             System.out.print(el + " ");
         }
 
-        //output : 012123344
+        //output : 012123344  
     }
 }
 
