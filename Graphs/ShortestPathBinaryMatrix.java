@@ -34,7 +34,6 @@ public class ShortestPathBinaryMatrix {
                 }
             }
         }
-
         return -1;
     }
 
