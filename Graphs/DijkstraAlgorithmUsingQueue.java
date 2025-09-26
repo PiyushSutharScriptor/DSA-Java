@@ -30,7 +30,7 @@ public class DijkstraAlgorithmUsingQueue {
             li.get(U).add(new Pair(D, V));
         }
 
-        PriorityQueue<Pair> pq = new PriorityQueue<>((a,b)->a.dist-b.dist);
+        Queue<Pair> pq = new LinkedList<>();
         pq.add(new Pair(0,k));
 
         int[] res = new int[v];
