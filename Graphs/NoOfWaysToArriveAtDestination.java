@@ -55,6 +55,14 @@ public class NoOfWaysToArriveAtDestination {
         }
 
         return ways[n-1];
+
+        //for long inputs use :
+        /*
+            use long instead of int
+            use Long.MAX_VALUE 
+            use Module after every adj[el] changes 
+            MOD = 1000000007
+        */
     }
 
     public static void main(String[] args) {
