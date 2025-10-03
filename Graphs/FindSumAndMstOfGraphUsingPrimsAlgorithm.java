@@ -21,7 +21,7 @@ class QPair{
         this.parent = parent1;
     }
 }
-
+      
 public class FindSumAndMstOfGraphUsingPrimsAlgorithm{
 
     public static List<List<Integer>> findSum(int[][] edges, int v){
