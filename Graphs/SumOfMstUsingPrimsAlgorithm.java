@@ -23,7 +23,7 @@ public class SumOfMstUsingPrimsAlgorithm{
             int U = edge[0];
             int V = edge[1];
             int D = edge[2];
-
+          
             li.get(U).add(new Pair(D,V));
             li.get(V).add(new Pair(D,U));
         }
