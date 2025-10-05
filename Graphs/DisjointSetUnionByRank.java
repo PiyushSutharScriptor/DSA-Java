@@ -51,7 +51,16 @@ public class DisjointSetUnionByRank {
         d1.union(6,7);
         d1.union(5,6);
 
-        if(d1.findParent(7)==d1.findParent(6)){
+        if(d1.findParent(3)==d1.findParent(7)){
+            System.out.println("Same parent");
+        }
+        else{
+            System.out.println("Not same");
+        }
+        
+        d1.union(3, 7);
+        
+        if(d1.findParent(3)==d1.findParent(7)){
             System.out.println("Same parent");
         }
         else{
