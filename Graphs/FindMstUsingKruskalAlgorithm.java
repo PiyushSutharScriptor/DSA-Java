@@ -76,6 +76,6 @@ public class FindMstUsingKruskalAlgorithm {
         int v = 3;
 
         int res = findMstSum(edges, v);
-        System.out.println("MST Sum: " + res);
+        System.out.println(res);
     }
 }
