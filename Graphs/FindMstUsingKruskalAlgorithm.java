@@ -1,3 +1,4 @@
+
 import java.util.*;
 
 class Pair{
@@ -39,7 +40,7 @@ class DisjointSet{
 
         if(size.get(pu)<size.get(pv)){
             parent.set(pu, pv);
-            size.set(pu,size.get(pv)+size.get(pu));
+            size.set(pv,size.get(pv)+size.get(pu));
         }
         else{
             parent.set(pv,pu);
@@ -49,7 +50,7 @@ class DisjointSet{
 }
 
 public class FindMstUsingKruskalAlgorithm {
-    public static int findSum(int[][] edges, int v){
+    public static List<List<Integer>> findSum(int[][] edges, int v){
         List<Pair> li = new ArrayList<>();
 
         for(int[] edge : edges){
@@ -60,23 +61,23 @@ public class FindMstUsingKruskalAlgorithm {
 
         DisjointSet d1 = new DisjointSet(v);
 
-        int sum = 0;
+        List<List<Integer>> res = new ArrayList<>();
         for(Pair pr : li){
             int u1 = d1.findParent(pr.u);
             int v1 = d1.findParent(pr.v);
 
             if(u1!=v1){
-                sum+=pr.wt;
+                res.add(List.of(pr.u,pr.v));
                 d1.union(u1, v1);
             }
         }
-        return sum;
+        return res;
     }
     public static void main(String[] args) {
         int[][] edges = {{0, 1, 5}, {1, 2, 3}, {0, 2, 1}};
         int v = 3;
 
-        int res = findSum(edges, v);
+        List<List<Integer>> res = findSum(edges, v);
         System.out.println(res);
     }
 }
