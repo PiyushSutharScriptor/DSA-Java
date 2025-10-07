@@ -1,81 +1,82 @@
 import java.util.*;
 
-class Pair {
-    int u; 
-    int v; 
-    int wt; 
+class Pair{
+    int wt;
+    int u;
+    int v;
 
-    Pair(int u, int v, int wt) {
-        this.u = u;
-        this.v = v;
-        this.wt = wt;
+    Pair(int wt1, int u1, int v1){
+        this.wt = wt1;
+        this.u = u1;
+        this.v = v1;
     }
 }
 
-class DisjointSet {
-    List<Integer> parent = new ArrayList<>();
-    List<Integer> size = new ArrayList<>();
+class DisjointSet{
+    ArrayList<Integer> parent = new ArrayList<>();
+    ArrayList<Integer> size = new ArrayList<>();
 
-    public DisjointSet(int n) {
-        for (int i = 0; i < n; i++) {
+    public DisjointSet(int n){
+        for(int i=0 ; i<n ; i++){
             parent.add(i);
             size.add(1);
         }
     }
 
-    public int findParent(int node) {
-        if (node == parent.get(node)) return node;
-        int fp = findParent(parent.get(node));
-        parent.set(node, fp);
-        return fp;
+    public int findParent(int node){
+        if(node == parent.get(node)) return node;
+        int pq = findParent(parent.get(node));
+        parent.set(node, pq);
+
+        return pq;
     }
 
-    public void unionBySize(int u, int v) {
+    public void union(int u, int v){
         int pu = findParent(u);
         int pv = findParent(v);
-        if (pu == pv) return;
 
-        if (size.get(pu) < size.get(pv)) {
+        if(pu==pv) return;
+
+        if(size.get(pu)<size.get(pv)){
             parent.set(pu, pv);
-            size.set(pv, size.get(pv) + size.get(pu));
-        } else {
-            parent.set(pv, pu);
-            size.set(pu, size.get(pu) + size.get(pv));
+            size.set(pu,size.get(pv)+size.get(pu));
+        }
+        else{
+            parent.set(pv,pu);
+            size.set(pu, size.get(pu)+size.get(pv));
         }
     }
 }
 
 public class FindMstUsingKruskalAlgorithm {
-    public static int findMstSum(int[][] edges, int v) {
-        List<Pair> edgeList = new ArrayList<>();
-        for (int[] e : edges) {
-            edgeList.add(new Pair(e[0], e[1], e[2]));
+    public static int findSum(int[][] edges, int v){
+        List<Pair> li = new ArrayList<>();
+
+        for(int[] edge : edges){
+            li.add(new Pair(edge[2], edge[0], edge[1]));
         }
 
-        Collections.sort(edgeList, (a, b) -> a.wt - b.wt);
+        Collections.sort(li,(a,b)->a.wt-b.wt);
 
-        DisjointSet ds = new DisjointSet(v);
+        DisjointSet d1 = new DisjointSet(v);
 
-        int mstSum = 0;
+        int sum = 0;
+        for(Pair pr : li){
+            int u1 = d1.findParent(pr.u);
+            int v1 = d1.findParent(pr.v);
 
-        for (Pair edge : edgeList) {
-            int pu = ds.findParent(edge.u);
-            int pv = ds.findParent(edge.v);
-
-            if (pu != pv) {
-                mstSum += edge.wt;
-                ds.unionBySize(pu, pv);
+            if(u1!=v1){
+                sum+=pr.wt;
+                d1.union(u1, v1);
             }
         }
-
-        return mstSum;
+        return sum;
     }
-
     public static void main(String[] args) {
         int[][] edges = {{0, 1, 5}, {1, 2, 3}, {0, 2, 1}};
         int v = 3;
 
-        int res = findMstSum(edges, v);
+        int res = findSum(edges, v);
         System.out.println(res);
     }
 }
