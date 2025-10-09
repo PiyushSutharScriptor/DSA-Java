@@ -49,7 +49,7 @@ public class MaximumStoneRemoval{
             mcol = Math.max(mcol, stones[i][1]);
         }
 
-        DisjointSet d1 = new DisjointSet(mrow+mcol+1);
+        DisjointSet d1 = new DisjointSet(mrow+mcol+2);
 
         Map<Integer,Integer> map = new HashMap<>();
 
@@ -73,7 +73,7 @@ public class MaximumStoneRemoval{
     }
 
     public static void main(String[] args) {
-        int stones[][] = {{0, 0},{0,1},{1,0},{1,2},{2,1},{2,2}};
+        int[][] stones = {{0, 0},{0,1},{1,0},{1,2},{2,1},{2,2}};
         int n = 6;
 
         int res = findMax(stones,n);
