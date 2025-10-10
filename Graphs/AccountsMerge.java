@@ -62,13 +62,13 @@ public class AccountsMerge {
 
         for(Map.Entry<String,Integer> m : map.entrySet()){
             String st = m.getKey();
-            int nd = m.getValue();
+            int nd = d1.findParent(m.getValue());
             mergeMap.get(nd).add(st);
         }
 
         List<List<String>> res = new ArrayList<>();
         for(int i=0 ; i<n ; i++){
-            if(mergeMap.size()==0) continue;
+            if(mergeMap.get(i).size()==0) continue;
 
             Collections.sort(mergeMap.get(i));
             List<String> temp = new ArrayList<>();
