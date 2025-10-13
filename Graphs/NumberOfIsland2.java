@@ -52,6 +52,7 @@ class FindIsland{
         visited = new boolean[m][n];
         d1 = new DisjointSet(m*n);
 
+        //marking number to recognize parent
         for(int i=0 ; i<m ; i++){
             for(int j=0 ; j<n ; j++){
                 arr[i][j] = c;
@@ -67,6 +68,7 @@ class FindIsland{
         visited[row][col] = true;
         count++;
 
+        //moving in 4 positions : UDLR
         int[] drow = {-1,0,1,0};
         int[] dcol = {0,1,0,-1};
 
@@ -74,7 +76,7 @@ class FindIsland{
             int r = row + drow[i];
             int c = col + dcol[i];
 
-            
+            // conditions : 
             if(r>=0 && r<m && c>=0 && c<n && visited[r][c]){
                 int current = arr[row][col];
                 int check = arr[r][c];
