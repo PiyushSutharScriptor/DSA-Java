@@ -53,7 +53,7 @@ public class AccountsMerge {
                     d1.union(i, map.get(accounts[i][j]));
                 }
             }
-        }
+        }                  
 
         List<List<String>> mergeMap = new ArrayList<>();
         for(int i=0 ; i<n ; i++){
