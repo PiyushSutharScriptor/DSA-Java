@@ -39,14 +39,6 @@ class DisjointSet {
 }
 
 public class LargeIsland {
-    public static void main(String[] args) {
-        int[][] grid = {
-            {1, 0},
-            {0, 1}
-        };
-
-        System.out.println(largestIsland(grid));
-    }
 
     public static int largestIsland(int[][] grid) {
         int n = grid.length;
@@ -98,5 +90,14 @@ public class LargeIsland {
         }
 
         return max;
+    }
+
+    public static void main(String[] args) {
+        int[][] grid = {
+            {1, 0},
+            {0, 1}
+        };
+                   
+        System.out.println(largestIsland(grid));
     }
 }
