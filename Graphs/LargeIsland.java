@@ -40,23 +40,29 @@ class DisjointSet {
 
 public class LargeIsland {
 
+    // Common directions for 4-connected neighbors
+    static int[][] dirs = {{-1,0}, {0,-1}, {1,0}, {0,1}};
+
+    public static boolean isValid(int r, int c, int n) {
+        return r >= 0 && c >= 0 && r < n && c < n;
+    }
+
     public static int largestIsland(int[][] grid) {
         int n = grid.length;
         DisjointSet ds = new DisjointSet(n * n);
 
-        int[][] dirs = {{-1,0},{0,1},{1,0},{0,-1}};
-
+        // Step 1: Connect all 1s
         for (int row = 0; row < n; row++) {
             for (int col = 0; col < n; col++) {
-                if (grid[row][col] == 1) {
-                    int node = row * n + col;
-                    for (int[] d : dirs) {
-                        int nr = row + d[0];
-                        int nc = col + d[1];
-                        if (nr >= 0 && nc >= 0 && nr < n && nc < n && grid[nr][nc] == 1) {
-                            int adjNode = nr * n + nc;
-                            ds.union(node, adjNode);
-                        }
+                if (grid[row][col] == 0) continue;
+
+                for (int[] d : dirs) {
+                    int r = row + d[0];
+                    int c = col + d[1];
+                    if (isValid(r, c, n) && grid[r][c] == 1) {
+                        int nodeNo = row * n + col;
+                        int adjNodeNo = r * n + c;
+                        ds.union(nodeNo, adjNodeNo);
                     }
                 }
             }
@@ -64,6 +70,7 @@ public class LargeIsland {
 
         int max = 0;
 
+        // Step 2: Try flipping each 0 to 1 and compute potential largest island
         for (int row = 0; row < n; row++) {
             for (int col = 0; col < n; col++) {
                 if (grid[row][col] == 0) {
@@ -71,12 +78,12 @@ public class LargeIsland {
                     for (int[] d : dirs) {
                         int nr = row + d[0];
                         int nc = col + d[1];
-                        if (nr >= 0 && nc >= 0 && nr < n && nc < n && grid[nr][nc] == 1) {
+                        if (isValid(nr, nc, n) && grid[nr][nc] == 1) {
                             uniqueParents.add(ds.findParent(nr * n + nc));
                         }
                     }
 
-                    int newSize = 1; 
+                    int newSize = 1; // flipped 0
                     for (int p : uniqueParents) {
                         newSize += ds.size.get(p);
                     }
@@ -85,6 +92,7 @@ public class LargeIsland {
             }
         }
 
+        // Step 3: If all are 1s, handle that edge case
         for (int i = 0; i < n * n; i++) {
             max = Math.max(max, ds.size.get(ds.findParent(i)));
         }
@@ -97,7 +105,6 @@ public class LargeIsland {
             {1, 0},
             {0, 1}
         };
-                   
-        System.out.println(largestIsland(grid));
+        System.out.println(largestIsland(grid)); // Expected output: 3
     }
 }
