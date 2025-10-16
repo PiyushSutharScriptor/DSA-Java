@@ -16,12 +16,12 @@ public class BridgeInGraph {
                 dfs(el, node, li, vis, low, time, res);
                 low[node] = Math.min(low[node],low[el]);
 
-                if(low[el]>low[node]){
+                if(low[el]>time[node]){
                     res.add(Arrays.asList(node,el));
                 }
             }
             else{
-                low[node] = Math.min(low[node],low[el]);
+                low[node] = Math.min(low[node],time[el]);
             }
         }
     }
@@ -46,7 +46,11 @@ public class BridgeInGraph {
         int[] low = new int[v];
         int[] time = new int[v];
 
-        dfs(0,-1,li,vis,low,time,res);
+        for(int i=0 ; i<v ; i++){
+            if(!vis[i]){
+                dfs(i,-1,li,vis,low,time,res);
+            }
+        }
         return res;
     }
 
