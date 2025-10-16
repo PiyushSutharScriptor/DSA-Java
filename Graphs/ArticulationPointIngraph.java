@@ -24,7 +24,8 @@ public class ArticulationPointIngraph {
             else{
                 low[node] = Math.min(low[node],time[el]);
             }
-        }
+        }       
+        //for 0th node
         if(parent==-1 && t>1){
             res.add(node);
         }
