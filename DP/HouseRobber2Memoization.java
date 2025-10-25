@@ -22,7 +22,7 @@ public class HouseRobber2Memoization {
         
         int[] dp = new int[n];
         Arrays.fill(dp,-1);
-        dp[0] = arr[0];
+        dp[0] = arr[0];                      
 
         int[] temp1 = new int[n];
         int[] temp2 = new int[n];
