@@ -12,7 +12,7 @@ public class HouseRobber2TabulationOptimized {
         for(int i=2 ; i<n ; i++){
             int pick = arr[i] + prev2;
             int notPick = 0 + prev1;
-
+                       
             int current = Math.max(pick, notPick);
             prev2 = prev1;
             prev1 = current;
