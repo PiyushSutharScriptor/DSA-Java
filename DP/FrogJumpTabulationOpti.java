@@ -12,7 +12,6 @@ public class FrogJumpTabulationOpti {
             first = second;
             second = curr;
         }
-
         return second;
     }
 
