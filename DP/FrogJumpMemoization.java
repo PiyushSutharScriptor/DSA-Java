@@ -21,7 +21,6 @@ class Jump{
         energy[n] = Math.min(left,right);
         return energy[n];
     }
-
 }
 
 public class FrogJumpMemoization {
