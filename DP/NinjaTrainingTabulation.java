@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class NinjaTrainingTabulation {
 
     public static int meritPoints(int[][] task){
