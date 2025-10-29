@@ -1,36 +1,46 @@
 import java.util.*;
 
-public class MinSumPathGridTabulation {
+public class MinSumPathGridTabulation{
 
-    public static int findMin(int[][] arr, int row , int col,int[][] dp){
-
-        if(row<0 || col<0) return (int)1e8;
-
-        if(dp[row][col]!=-1) return dp[row][col];
-
-        if(row==0 && col==0){
-            return arr[0][0];
-        }
-
-        int up = arr[row][col] + findMin(arr, row-1, col,dp);
-        int left = arr[row][col] + findMin(arr, row, col-1,dp);
+    public static int findMin(int[][] arr){
 
         
-        return dp[row][col] = Math.min(up,left);
-    }
-
-    public static void main(String[] args) {
-        int[][] grid = {{1,2,3},{4,5,6}};
-
-        int m = grid.length;
-        int n = grid[0].length;
+        int m = arr.length;
+        int n = arr[0].length;
 
         int[][] dp = new int[m][n];
         for(int[] ar : dp){
             Arrays.fill(ar,-1);
         }
 
-        int res = findMin(grid,m-1,n-1,dp);
+        for(int i=0 ; i<m ; i++){
+            for(int j=0 ; j<n ; j++){
+                if(i<0 || j<0){
+                    continue;
+                }
+
+                if(i==0 && j==0){
+                    dp[i][j]=arr[i][j];
+                    continue;
+                }
+
+                int up = (int)1e8;
+                int left = (int)1e8;
+
+                if(i>0) up = arr[i][j] + dp[i-1][j];
+                if(j>0) left = arr[i][j] + dp[i][j-1];
+
+                dp[i][j] = Math.min(up,left);
+            }
+        }        
+
+        return dp[m-1][n-1];
+    }
+
+    public static void main(String[] args) {
+        int[][] grid = {{1,2,3},{4,5,6}};
+
+        int res = findMin(grid);
         System.out.println(res);
     }
 }
