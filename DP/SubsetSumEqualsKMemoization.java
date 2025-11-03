@@ -6,6 +6,7 @@ public class SubsetSumEqualsKMemoization {
 
         if(idx<0) return false;
         if(target==0) return true;
+        
         if(idx==0 && arr[idx]==target) return true;
 
         if(dp[idx][target]!=-1){
