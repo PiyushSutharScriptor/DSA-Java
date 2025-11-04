@@ -3,6 +3,7 @@ public class CountsSubsetsWithSumkRecursion {
     public static int findCount(int[] arr, int idx, int target){
         if(target==0) return 1;
         if(idx<0) return 0;
+        if(idx==0) return arr[idx]==target ? 1 : 0;
 
         int notTake = findCount(arr, idx-1, target);
 
