@@ -7,10 +7,8 @@ public class MinimumCoinsTabulation {
         int[][] dp = new int[n][amount + 1];
         int INF = (int)1e8;
 
-        // Base case: to make amount 0 -> need 0 coins
         for (int i = 0; i < n; i++) dp[i][0] = 0;
 
-        // Base case for first coin
         for (int target = 1; target <= amount; target++) {
             if (target % arr[0] == 0)
                 dp[0][target] = target / arr[0];
@@ -18,7 +16,6 @@ public class MinimumCoinsTabulation {
                 dp[0][target] = INF;
         }
 
-        // Fill the DP table
         for (int i = 1; i < n; i++) {
             for (int target = 1; target <= amount; target++) {
                 int notTake = dp[i - 1][target];
