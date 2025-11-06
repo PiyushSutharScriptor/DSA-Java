@@ -3,7 +3,7 @@ import java.util.*;
 public class MinimumCoinsMemiozation{
 
     public static int findMin(int idx, int[] arr, int amount, int[][] dp){
-
+    
         if(amount==0) return 0;
 
         if(idx<0) return (int)1e8;
