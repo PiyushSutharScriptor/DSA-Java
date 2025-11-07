@@ -25,7 +25,7 @@ public class MinimumCoinsTabulationOpt {
                 int notTake = dp[target];
                 int take = INF;
                 if (arr[i] <= target)
-                    take = 1 + dp[target - arr[i]];
+                    take = 1 + temp[target - arr[i]];
                 temp[target] = Math.min(take, notTake);
             }
 
