@@ -22,10 +22,15 @@ public class NodesWithKDistance
         root.left.right = new Node(5);
         root.right.left = new Node(30);
         
+        int k = 2;
         Node fNode = root.left.left;
         
+        //child-parent map
         Map<Node,Node> mp = new HashMap<>();
         mp.put(root,null);
+        //visited map : 
+        Map<Node,Boolean> visited = new HashMap<>();
+        visited.put(root,false);
         
         Queue<Node> que = new LinkedList<>();
         que.add(root);
@@ -40,11 +45,13 @@ public class NodesWithKDistance
                 if(el.left!=null){
                     que.add(el.left);
                     mp.put(el.left,el);
+                    visited.put(el.left,false);
                 }
                 
                 if(el.right!=null){
                     que.add(el.right);
                     mp.put(el.right,el);
+                    visited.put(el.right,false);
                 }
                 
                 size--;
@@ -54,27 +61,41 @@ public class NodesWithKDistance
         Queue<Node> q = new LinkedList<>();
         q.add(fNode);
         
-        int count = 0;
-        while(!q.isEmpty() && count!=2){
-            int size = que.size();
-            count++;
+        int dis = 0;
+        
+        while(!q.isEmpty()){
+            if(dis==k) break;
+            
+            int size = q.size();
+            
             while(size!=0){
-                Node el = que.poll();
                 
-                if(el.left!=null){
-                    que.add(el.left);
-                    mp.put(el.left,el);
+                Node el = q.poll();
+                visited.put(el,true);
+                
+                if(el.left!=null && !visited.get(el.left)){
+                    q.add(el.left);
                 }
                 
-                if(el.right!=null){
-                    que.add(el.right);
-                    mp.put(el.right,el);
+                if(el.right!=null && !visited.get(el.right)){
+                    q.add(el.right);
+                }
+                
+                if(mp.get(el)!=null && !visited.get(mp.get(el))){
+                    q.add(mp.get(el));
                 }
                 
                 size--;
             }
+            
+            dis++;
         }
         
-        System.out.println(mp);
+        List<Integer> res = new ArrayList<>();
+        for(Node nodes : q){
+            res.add(nodes.data);
+        }
+        
+        System.out.println(res);
 	}
 }
