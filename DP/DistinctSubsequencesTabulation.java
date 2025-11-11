@@ -6,7 +6,7 @@ public class DistinctSubsequencesTabulation {
         int n = s2.length();
 
         int[][] dp = new int[m][n];
-
+                    
         for (int i = 0; i < n; i++) {
             dp[i][0] = 1;
         }
