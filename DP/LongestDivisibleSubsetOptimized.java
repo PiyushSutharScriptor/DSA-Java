@@ -47,6 +47,7 @@ public class LongestDivisibleSubsetOptimized {
         ans.add(arr[curr]);
 
         Collections.reverse(ans);
+        
         return ans;
     }
 
