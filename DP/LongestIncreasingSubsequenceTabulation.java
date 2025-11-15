@@ -21,6 +21,7 @@ public class LongestIncreasingSubsequenceTabulation {
             }
         }
         
+        //note : the dp[][this should be +1 because of prev>=-1]    
         return dp[0][0];
     }
 
