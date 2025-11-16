@@ -45,5 +45,3 @@ public class LongestStringChainOpti {
         System.out.println(maxi);
     }
 }
-
-// "dog", "dogs", "dots", "dot", "d", "do"
