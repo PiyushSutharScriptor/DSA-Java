@@ -22,5 +22,7 @@ public class LongestIncreasingSubsequenceOpt {
         }
 
         System.out.println(maxi);
+
+        //only the max is used 
     }
 }
