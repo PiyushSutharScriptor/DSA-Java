@@ -1,4 +1,4 @@
-public class MatrixChainMultiplication{
+public class MatrixChainMultiplicationRecursion{
 
     public static int findMin(int i, int j, int[] arr){
         if(i==j) return 0;
