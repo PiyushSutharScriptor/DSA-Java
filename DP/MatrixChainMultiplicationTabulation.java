@@ -1,6 +1,3 @@
-
-import java.util.*;
-
 public class MatrixChainMultiplicationTabulation{
 
     public static int findMin(int[] arr){
