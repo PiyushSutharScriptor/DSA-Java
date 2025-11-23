@@ -31,6 +31,7 @@ public class ImplementationOfTrie {
         root = new Node();
     }
     
+    //inserting every char
     public void insert(String word) {
         Node node = root;
 
@@ -45,6 +46,7 @@ public class ImplementationOfTrie {
 
     }
     
+    //search for word
     public boolean search(String word) {
         Node node = root;
 
@@ -59,6 +61,7 @@ public class ImplementationOfTrie {
         return false;
     }
     
+    //word starts with 
     public boolean startsWith(String prefix) {
         Node node = root;
 
@@ -72,11 +75,3 @@ public class ImplementationOfTrie {
         return true;
     }
 }
-
-/**
- * Your Trie object will be instantiated and called as such:
- * Trie obj = new Trie();
- * obj.insert(word);
- * boolean param_2 = obj.search(word);
- * boolean param_3 = obj.startsWith(prefix);
- */
