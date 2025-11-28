@@ -24,6 +24,18 @@ public class RotateMatrix90DegOpti {
             }
         }
 
+        /*
+        for(int i=0 ; i<n-1 ; i++){
+            for(int j=i+1 ; j<n ; j++){
+                if(i!=j){
+                    int temp = arr[i][j];
+                    arr[i][j] = arr[j][i];
+                    arr[j][i] = temp;
+                }
+            }
+        }
+        */
+
         for(int k=0 ; k<n ; k++){
             int i=0;
             int j=n-1;
