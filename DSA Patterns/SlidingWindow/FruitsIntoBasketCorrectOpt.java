@@ -25,6 +25,6 @@ public class FruitsIntoBasketCorrectOpt {
         }
 
         System.out.println(maxi);
-
-    }   
+             
+    }       
 }
