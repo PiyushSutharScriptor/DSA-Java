@@ -2,7 +2,6 @@ public class SortColorsBetter {
     public static void main(String[] args) {
         int[] arr = {2,1,2,0,1,2,0,1,2};
 
-        int n = arr.length;
         int zero = 0;
         int one = 0;
         int two = 0;
