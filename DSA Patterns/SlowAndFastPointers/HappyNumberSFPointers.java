@@ -19,6 +19,11 @@ public class HappyNumberSFPointers {
         int slow = n;
         int fast = next(n);
 
+        /* I can define slow = n as well as fast = n 
+            > there is just few iteration difference 
+            > the output will be same (just to reduce runtime)
+        */
+       
         while(fast!=1 && slow!=fast){
             slow = next(slow);
             fast = next(next(fast));
