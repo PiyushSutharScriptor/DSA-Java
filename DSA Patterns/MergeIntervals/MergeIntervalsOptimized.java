@@ -27,7 +27,9 @@ public class MergeIntervalsOptimized{
             }
         }
 
+        //add the last pair 
         li.add(new int[]{x,y});
+        
         for(int[] arr : li){
             System.out.println(Arrays.toString(arr));
         }
