@@ -15,7 +15,7 @@ class Node{
     }
 }
 
-public class ReverseNodesInkGroup {
+public class ReverseNodesInkGroupBrute {
 
     public static Node findRevOrder(Node head, int k){
         List<Integer> li = new ArrayList<>();
