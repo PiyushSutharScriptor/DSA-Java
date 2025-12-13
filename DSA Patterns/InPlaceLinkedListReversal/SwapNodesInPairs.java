@@ -43,10 +43,11 @@ public class SwapNodesInPairs {
         Node prevNode = null;
         Node head = root;
 
-        while(head!=null && head.next!=null){
+        while(head!=null && head.next!=null){ 
             Node first = head;
             Node second = head.next;
             Node third = second.next;
+            // the third will not give NullPointer because of head.next!=null condition check
 
             second.next = first;
             first.next = third;
