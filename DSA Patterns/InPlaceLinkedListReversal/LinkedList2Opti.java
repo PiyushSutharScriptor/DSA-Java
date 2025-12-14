@@ -69,7 +69,7 @@ public class LinkedList2Opti {
         Node nextLeft = leftNode.next;
         Node rightConnect = rightNode.next;
         rightNode.next = null;
-
+                                            
         Node newHead = reverse(nextLeft);
 
         leftNode.next = newHead;
