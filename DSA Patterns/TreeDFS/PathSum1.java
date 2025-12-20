@@ -10,7 +10,7 @@ class Node{
     }
 }
 
-public class PathSum{
+public class PathSum1{
 
     public static boolean findPath(Node root, int target){
         if(root==null) return false;
