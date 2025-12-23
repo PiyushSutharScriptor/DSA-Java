@@ -42,7 +42,8 @@ public class SlidingWindowMedian {
             max.clear();
 
         }
-
+        
+        //print
         for(double el : res){
             System.out.println(el);
         }
