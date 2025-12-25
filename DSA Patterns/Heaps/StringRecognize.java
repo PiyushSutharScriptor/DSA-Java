@@ -1,15 +1,3 @@
-import java.util.*;
-
-class Pair{
-    char ch;
-    int count;
-
-    Pair(char ch1, int count1){
-        this.ch = ch1;
-        this.count = count1;
-    }
-}
-
 public class StringRecognize{
     public static void main(String[] args) {
         String s = "aaabbc";
@@ -34,14 +22,20 @@ public class StringRecognize{
         System.out.println(maxFreq);
 
         if(maxFreq>((n+1)/2)){
-            System.out.println("x");
+            System.out.println("_");
+        }
+        else if(maxFreq<=1){
+            System.out.println(s);
         }
         else{
             char[] res = new char[n];
-            for(int i=0;i<n;i+=2){
-                res[i] = (char)('a'+maxEle);
+
+            int id = 0;
+            while(arr[maxEle]!=0){
+                res[id] = (char)('a'+maxEle);
+                id+=2;
+                arr[maxEle]--;
             }
-            arr[maxEle] = 0;
 
             int k=1;
             for(int i=0 ; i<26 ; i++){
