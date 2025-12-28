@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class subsets2 {
+public class Subsets2 {
 
     public static void findSubsets(List<List<Integer>> res, List<Integer> li, int[] arr, int idx){
         int n = arr.length;
