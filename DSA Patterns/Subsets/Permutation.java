@@ -1,36 +1,38 @@
 import java.util.*;
 
-public class Permutation {
-    public static void findPermutations(List<List<Integer>> res,
-                                        List<Integer> li,
-                                        int[] arr,
-                                        boolean[] used) {
+public class Permutation{
 
-        if (li.size() == arr.length) {
+    public static void findPermutation(int[] arr, boolean[] visited,List<List<Integer>> res, List<Integer>li){
+
+        //base case : 
+        if(li.size()==arr.length){
             res.add(new ArrayList<>(li));
             return;
         }
 
-        for (int i = 0; i < arr.length; i++) {
+        for(int i=0 ; i<arr.length ; i++){
+            if(visited[i]) continue;
 
-            if (used[i]) continue;
-
-            used[i] = true;
             li.add(arr[i]);
+            visited[i] = true;
 
-            findPermutations(res, li, arr, used);
-
-            li.remove(li.size() - 1);
-            used[i] = false;
+            findPermutation(arr, visited, res, li);
+            li.remove(li.size()-1);
+            visited[i] = false;
         }
+
     }
-
     public static void main(String[] args) {
-        int[] nums = {1,2,3,4};
-        List<List<Integer>> res = new ArrayList<>();
-        boolean[] used = new boolean[nums.length];
+        int[] arr = {1,2,3};
 
-        findPermutations(res, new ArrayList<>(), nums, used);
-        System.out.println(res); 
+        int n = arr.length;
+        List<List<Integer>> res = new ArrayList<>();
+        boolean[] visited = new boolean[n];
+
+        findPermutation(arr,visited,res,new ArrayList<>());
+
+        for(List<Integer> el : res){
+            System.out.println(el);
+        }
     }
 }
