@@ -17,7 +17,7 @@ public class FindKthLargestElementBetter {
     }
 
     public static void main(String[] args) {
-        int[] arr = {3,4};
+        int[] arr = {3,41,4,58,7,5};
         int k = 2;
 
         int res = findEle(arr,k);
