@@ -34,6 +34,7 @@ public class mergeKSortedList {
         Node root3 = new Node(2);
         root3.next = new Node(6);
 
+        //printing ll's
         print(root);
         print(root2);
         print(root3);
@@ -59,6 +60,7 @@ public class mergeKSortedList {
             }
         }
 
+        //final ll print
         print(res.next);
 
     }
