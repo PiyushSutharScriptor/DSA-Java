@@ -3,7 +3,7 @@ import java.util.*;
 public class SmallestRangeInKlistsBrute {
 
     public static boolean findOne (int[][] arr , int k){
-        
+        return false;   
     }
 
     public static void main(String[] args) {
