@@ -1,4 +1,4 @@
-public class PartionEqualSubset{
+public class PartionEqualSubsetBrute{
 
     public static boolean findValid(int idx, int l, int r, int[]arr){
 
