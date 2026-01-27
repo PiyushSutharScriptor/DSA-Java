@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class TargetSumMemoization {
-
     public static int findTar(int idx, int t, int[] arr,int[][] dp){
 
         if(dp[idx][t]!=-1) return dp[idx][t];
@@ -34,5 +33,5 @@ public class TargetSumMemoization {
 
         int res = findTar(n-1,target,arr,dp);
         System.out.println(res);
-    }
-}
+    }                                       
+}                       
