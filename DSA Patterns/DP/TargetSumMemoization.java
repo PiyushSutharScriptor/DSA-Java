@@ -7,17 +7,18 @@ public class TargetSumMemoization {
 
         if(idx==0){
             int cnt = 0;
-
-            if(t+arr[idx]==0) cnt++;
-            if(t-arr[idx]==0) cnt++;
-            
+            if(t==0 && arr[0]==0) cnt=2;
+            else if(t==0 || arr[0]==t) cnt=1;
             return dp[idx][t]=cnt;
         }
 
-        int add = findTar(idx-1, t+arr[idx], arr, dp);
-        int sub = findTar(idx-1, t-arr[idx], arr, dp);
+        int notTake = findTar(idx-1, t, arr, dp);
+        int take = 0;
+        if(t>=arr[idx]){
+            take = findTar(idx-1, t-arr[idx], arr, dp);
+        }
 
-        return dp[idx][t]=add+sub;
+        return dp[idx][t]=take+notTake;
     }
 
     public static void main(String[] args) {
@@ -26,12 +27,23 @@ public class TargetSumMemoization {
 
         int n = arr.length;
 
-        int[][] dp = new int[n][target+1];
+        int sum = 0;
+        for(int el : arr){
+            sum+=el;
+        }
+
+        if((target + sum)%2 != 0 || Math.abs(target) > sum){
+            System.out.println(0);
+            return;
+        }
+
+        int t = (target+sum)/2;
+        int[][] dp = new int[n][t+1];
         for(int[] ar : dp){
             Arrays.fill(ar,-1);
         }
 
-        int res = findTar(n-1,target,arr,dp);
+        int res = findTar(n-1,t,arr,dp);
         System.out.println(res);
     }                                       
 }                       
