@@ -1,20 +1,20 @@
 import java.util.*;
 
-public class EditDistanceMemoization{
+public class EditDistanceMemoization2{
 
     public static int findMin(int idx1, int idx2, String s1,    String s2, int[][] dp){
         //base cases
-        if(idx1<0){
-            return idx2+1;
+        if(idx1==0){
+            return idx2;
         }
-        if(idx2<0){
-            return idx1+1;
+        if(idx2==0){
+            return idx1;
         }
-        if(idx2<0 && idx1<0) return 0;
+        if(idx2==0 && idx1==0) return 0;
 
         if(dp[idx1][idx2]!=-1) return dp[idx1][idx2];
 
-        if(s1.charAt(idx1)==s2.charAt(idx2)){
+        if(s1.charAt(idx1-1)==s2.charAt(idx2-1)){
             return dp[idx1][idx2]=findMin(idx1-1, idx2-1, s1, s2,dp);
         }
         return dp[idx1][idx2] = Math.min( 
@@ -40,13 +40,14 @@ public class EditDistanceMemoization{
             System.out.println(n1);
         }
         else{
-            int[][] dp = new int[n1][n2];
+            int[][] dp = new int[n1+1][n2+1];
             for(int[] ar : dp){
                 Arrays.fill(ar,-1);
             }
-            int res = findMin(n1-1, n2-1, s1, s2, dp);
+            int res = findMin(n1, n2, s1, s2, dp);
             System.out.println(res);
         }
     }
 }
+
 
