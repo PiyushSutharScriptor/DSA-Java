@@ -1,6 +1,6 @@
 public class DungeonGameTabulation {
 
-    public static int findMi(int[][] arr) {
+    public static int findMini(int[][] arr) {
         int m = arr.length;
         int n = arr[0].length;
 
@@ -28,6 +28,6 @@ public class DungeonGameTabulation {
 
     public static void main(String[] args) {
         int[][] arr = {{-2,-3,3},{-5,-10,1},{10,30,-5}};
-        System.out.println(findMi(arr));
+        System.out.println(findMini(arr));
     }
 }
