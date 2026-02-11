@@ -2,7 +2,7 @@ public class DungeonGameRecursion {
 
     public static int maxi = (int)1e8;
 
-    public static int findMin(int x, int y, int[][] arr){
+    public static int findMini(int x, int y, int[][] arr){
         int m = arr.length;
         int n = arr[0].length;
 
@@ -12,8 +12,8 @@ public class DungeonGameRecursion {
 
         if(x >= m || y >= n) return maxi;
 
-        int down = findMin(x+1, y, arr);
-        int right = findMin(x, y+1, arr);
+        int down = findMini(x+1, y, arr);
+        int right = findMini(x, y+1, arr);
 
         int need = Math.min(down, right) - arr[x][y];
 
@@ -23,7 +23,7 @@ public class DungeonGameRecursion {
     public static void main(String[] args) {
         int[][] arr = {{-2,-3,3},{-5,-10,1},{10,30,-5}};
 
-        int res = findMin(0, 0, arr);
+        int res = findMini(0, 0, arr);
         System.out.println(res); 
     }
 }
