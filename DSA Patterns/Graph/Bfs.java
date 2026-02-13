@@ -23,13 +23,14 @@ public class Bfs {
         List<Integer> res = new ArrayList<>();
 
         que.add(k);
-
+        visited[k] = true;
+        
         while(!que.isEmpty()){
             int el = que.poll();
-            visited[el] = true;
             res.add(el);
             for(int ele : li.get(el)){
                 if(!visited[ele]){
+                    visited[ele] = true;
                     que.add(ele);
                 }
             }
