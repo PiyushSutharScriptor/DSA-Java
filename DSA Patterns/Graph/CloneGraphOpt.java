@@ -2,7 +2,7 @@ import java.util.*;
 
 class CloneGraphOpt {
     HashMap<Node, Node> map = new HashMap<>();
-
+                
     public Node cloneGraph(Node node) {
         if(node == null) return null;
 
