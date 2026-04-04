@@ -1,0 +1,54 @@
+# Brute Force
+class Solution {
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        for(int i=m ; i<m+n ; i++){
+            nums1[i] = nums2[i-m];
+        }
+
+        Arrays.sort(nums1);
+    }
+}
+
+
+=====================================================
+
+
+# Optimized Solution
+class Solution {
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        int[]arr = new int[m+n];
+
+        int s1 = 0;                             
+        int s2 = 0;
+        int cur = 0;
+
+        while(s1<m && s2<n){
+            if(nums1[s1]<nums2[s2]){
+                arr[cur] = nums1[s1];
+                s1++;
+            }
+            else{
+                arr[cur] = nums2[s2];
+                s2++;
+            }
+            cur++;
+        }
+
+        while(s1<m){
+            arr[cur] = nums1[s1];
+            s1++;
+            cur++;
+        }
+
+        while(s2<n){
+            arr[cur] = nums2[s2];
+            s2++;
+            cur++;
+        }
+
+        for(int i=0 ; i<m+n ; i++){
+            nums1[i] = arr[i];
+        }
+
+    }
+}
