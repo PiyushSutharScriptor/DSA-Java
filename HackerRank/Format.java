@@ -5,29 +5,26 @@ public class Format {
     public static void main(String[] args) {
             Scanner sc=new Scanner(System.in);
             System.out.println("================================");
-            for(int i=0;i<3;i++)
-            {
-                String s1 = sc.next();
-                int x = sc.nextInt();
+            for(int i=0;i<3;i++){
+                String s1=sc.next();
+                int x=sc.nextInt();
                 
-                String s2;
-                if(x==0){
-                    s2 = "000";
-                }
-                else if(x<100){
-                    s2 = "0"+x;
-                }
-                else s2 = ""+x;
+                int left = 15-s1.length();
                 
-                int len = 15-s1.length();
-                
-                System.out.printf(s1);
-                if(len>0){
-                  for(int a=0 ; a<len ; a++){
-                    System.out.printf(" ");
-                  }
+                System.out.print(s1);
+                for(int k=0 ; k<left ; k++){
+                  System.out.print(" ");
                 }
-                System.out.printf(s2);
+                
+                if(x<100 && x>0){
+                  System.out.print("0"+x);  
+                }
+                else if(x==0){
+                  System.out.print("000");
+                }
+                else{
+                  System.out.print(x);
+                }
                 
                 System.out.println();
             }
@@ -35,6 +32,8 @@ public class Format {
 
     }
 }
+
+
 
 
 
