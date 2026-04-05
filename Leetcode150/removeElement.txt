@@ -1,0 +1,46 @@
+# Brute force
+class Solution {
+    public int removeElement(int[] nums, int val) {
+        int n = nums.length;
+
+        int arr[] = new int[n];
+        int k = 0;
+
+        for(int i=0 ; i<n ; i++){
+            if(nums[i]!=val){
+                arr[k] = nums[i];
+                k++;
+            }
+        }
+
+        for(int i=0 ; i<n ; i++){
+            nums[i] = arr[i];
+        }
+
+        // Arrays.sort(nums);
+
+        return k;
+    }
+}
+
+
+
+=====================================================
+# Optimized 
+class Solution {
+    public int removeElement(int[] nums, int val) {
+
+        int n = 0;
+
+        for(int el : nums){
+            if(el!=val){
+                nums[n++] = el;
+            }
+        }
+
+        return n;
+
+    }
+}
+
+
