@@ -1,0 +1,47 @@
+import java.util.*;
+
+public class main{
+    public static void main(String[] args) {
+        int[] nums = {0,0,1,1,1,2,2,3,3,4};
+
+        Map<Integer,Integer> map = new HashMap<>();
+
+        for(int el : nums){
+            map.put(el, map.getOrDefault(el, 0)+1);
+        }
+
+        // printing whole map
+        System.out.println(map);
+
+        System.out.println();
+
+        // printing keys from map
+        for(int el : map.keySet()){
+            System.out.print(el + " ");
+        }
+
+        System.out.println();
+
+        //printing values from map
+        for(int el : map.values()){
+            System.out.print(el + " ");
+        }
+
+        System.out.println();
+        System.out.println();
+
+        // printing whole map (java 8+ lambda)
+        map.forEach((key,value)->{
+            System.out.println(key + " = " + value);
+        });
+        
+        System.out.println();
+        System.out.println();
+
+        // printing whole map (standard)
+        for(Map.Entry<Integer,Integer> entry : map.entrySet()){
+            System.out.println(entry.getKey() + " = " + entry.getValue());
+        }
+
+    }
+}
